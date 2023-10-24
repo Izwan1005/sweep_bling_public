@@ -160,10 +160,10 @@
 
         layer_0 {
             bindings = <
-&kp Q  &kp W            &kp F            &kp P            &kp G                      &kp J                 &kp L              &kp U      &kp Y    &kp SEMI
-&kp A  &Layer_hold 4 R  &Layer_hold 5 S  &Layer_hold 2 T  &mt D LEFT_GUI             &kp H                 &kp N              &kp E      &kp I    &kp O
-&kp Z  &mt LEFT_ALT X   &kp C            &kp V            &kp B                      &kp K                 &kp M              &kp COMMA  &kp DOT  &kp FSLH
-                                         &mt LCTRL ENTER  &Layer_hold 1 BACKSPACE    &mt LEFT_SHIFT SPACE  &Layer_hold 3 TAB
+&kp Q  &kp W            &kp F            &kp P            &kp G              &kp J                 &kp L              &kp U      &kp Y    &kp SEMI
+&kp A  &Layer_hold 4 R  &Layer_hold 5 S  &Layer_hold 2 T  &mt LEFT_GUI D     &kp H                 &kp N              &kp E      &kp I    &kp O
+&kp Z  &mt LEFT_ALT X   &kp C            &kp V            &kp B              &kp K                 &kp M              &kp COMMA  &kp DOT  &kp FSLH
+                                         &mt LCTRL ENTER  &lt 1 BACKSPACE    &mt LEFT_SHIFT SPACE  &Layer_hold 3 TAB
             >;
         };
 
