@@ -72,6 +72,40 @@
 
             label = "NORSK_OE_CAP";
         };
+        degree: degree {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_6>,
+                <&macro_release>;
+
+            label = "DEGREE";
+        };
+        par_mid: par_mid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "PAR_MID";
+        };
+        brk_mid: brk_mid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "BRK_MID";
+        };
+        brc_mid: brc_mid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "BRC_MID";
+        };
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp Z &kp W &kp A &kp N &kp DOT &kp P &kp E &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL";
+        };
     };
 
     behaviors {
@@ -125,6 +159,38 @@
 
             tapping-term-ms = <300>;
         };
+        SHFT_SPC: SHFT_SPC {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHFT_SPC";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <130>;
+            hold-trigger-key-positions = <32>;
+        };
+        UND_MINS: UND_MINS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UND_MINS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+
+            tapping-term-ms = <300>;
+        };
+        AMP_CURL: AMP_CURL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AMP_CURL";
+            #binding-cells = <0>;
+            bindings = <&kp AMPERSAND>, <&kp TILDE>;
+
+            tapping-term-ms = <300>;
+        };
+        SUB_SUP: SUB_SUP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUB_SUP";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LC(EQUAL)>, <&kp LC(LS(EQUAL))>;
+        };
     };
 
     combos {
@@ -160,55 +226,55 @@
 
         layer_0 {
             bindings = <
-&kp Q  &kp W            &kp F            &kp P            &kp G              &kp J                 &kp L              &kp U      &kp Y    &kp SEMI
-&kp A  &Layer_hold 4 R  &Layer_hold 5 S  &Layer_hold 2 T  &mt LEFT_GUI D     &kp H                 &kp N              &kp E      &kp I    &kp O
-&kp Z  &mt LEFT_ALT X   &kp C            &kp V            &kp B              &kp K                 &kp M              &kp COMMA  &kp DOT  &kp FSLH
-                                         &mt LCTRL ENTER  &lt 1 BACKSPACE    &mt LEFT_SHIFT SPACE  &Layer_hold 3 TAB
+&kp Q  &kp W            &kp F            &kp P            &kp G              &kp J                        &kp L              &kp U      &kp Y    &kp SEMI
+&kp A  &Layer_hold 4 R  &Layer_hold 5 S  &Layer_hold 2 T  &mt LEFT_GUI D     &kp H                        &kp N              &kp E      &kp I    &kp O
+&kp Z  &mt LEFT_ALT X   &kp C            &kp V            &kp B              &kp K                        &kp M              &kp COMMA  &kp DOT  &kp FSLH
+                                         &mt LCTRL ENTER  &lt 1 BACKSPACE    &SHFT_SPC RIGHT_SHIFT SPACE  &Layer_hold 3 TAB
             >;
         };
 
         layer_1 {
             bindings = <
-&caps_esc   &kp F9      &AE        &trans      &QUOT_DQUO    &trans             &kp UP             &trans       &OE            &kp LS(CARET)
-&AO         &kp LSHIFT  &kp LCTRL  &trans      &trans        &kp LEFT           &kp DOWN           &kp RIGHT    &kp LS(DLLR)   &kp LS(POUND)
-&kp LS(F3)  &trans      &trans     &trans      &trans        &trans             &kp LS(LEFT)       &kp LA(END)  &kp LS(PRCNT)  &kp BSLH
-                                   &kp LS(AT)  &trans        &kp LS(LC(SPACE))  &kp LS(LC(SPACE))
+&caps_esc   &kp F9      &AE        &trans      &QUOT_DQUO    &AMP_CURL          &kp UP             &UND_MINS  &OE          &kp CARET
+&AO         &kp LSHIFT  &kp LCTRL  &trans      &trans        &kp LEFT           &kp DOWN           &kp RIGHT  &kp DOLLAR   &kp HASH
+&kp LS(F3)  &trans      &trans     &trans      &trans        &SUB_SUP           &kp LS(LEFT)       &degree    &kp PERCENT  &kp BSLH
+                                   &kp LS(AT)  &trans        &kp LS(LC(SPACE))  &kp LS(LC(MINUS))
             >;
         };
 
         layer_2 {
             bindings = <
-&trans    &trans     &kp F2     &trans   &trans          &kp PLUS   &kp N1   &kp N2  &kp N3  &kp STAR
-&kp LALT  &kp LSHFT  &kp LCTRL  &trans   &trans          &kp MINUS  &kp N4   &kp N5  &kp N6  &kp FSLH
-&trans    &trans     &trans     &trans   &trans          &kp DOT    &kp N7   &kp N8  &kp N9  &kp EQUAL
-                                &kp RET  &kp LC(BSPC)    &kp N0     &kp TAB
+&trans         &trans     &kp F2     &trans   &kp LC(ASTRK)        &kp PLUS   &kp N1   &kp N2  &kp N3  &kp STAR
+&kp LALT       &kp LSHFT  &kp LCTRL  &trans   &kp C_VOLUME_UP      &kp MINUS  &kp N4   &kp N5  &kp N6  &kp FSLH
+&kp LC(LS(N))  &trans     &trans     &trans   &kp C_VOLUME_DOWN    &kp DOT    &kp N7   &kp N8  &kp N9  &kp EQUAL
+                                     &kp RET  &kp LC(BSPC)         &kp N0     &kp TAB
             >;
         };
 
         layer_3 {
             bindings = <
-&kp LALT   &kp F1  &kp F2  &kp F3  &kp F10         &trans         &kp PG_UP  &trans   &trans  &trans
-&kp LCTRL  &kp F4  &kp F5  &kp F6  &kp F11         &kp HOME       &kp PG_DN  &kp END  &trans  &trans
-&kp LSHFT  &kp F7  &kp F8  &kp F9  &kp F12         &kp LC(LA(I))  &trans     &trans   &trans  &trans
-                           &trans  &kp LC(BSPC)    &kp BSPC       &trans
+&kp LALT   &kp F1  &kp F2  &kp F3    &kp F10    &trans         &kp PG_UP  &trans    &trans    &trans
+&kp LCTRL  &kp F4  &kp F5  &kp F6    &kp F11    &trans         &kp PG_DN  &trans    &trans    &trans
+&kp LSHFT  &kp F7  &kp F8  &kp F9    &kp F12    &kp LC(LA(I))  &par_mid   &brc_mid  &brk_mid  &trans
+                           &kp HOME  &kp END    &email         &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans            &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&kp C_PLAY_PAUSE  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+                                  &kp LEFT  &kp RIGHT    &trans  &trans
             >;
         };
 
-        layer_5 {
+        layer_6 {
             bindings = <
-&trans  &trans         &trans  &trans       &trans       &trans  &trans        &trans        &trans  &trans
-&trans  &kp LS(LG(S))  &trans  &trans       &trans       &trans  &kp LS(LPAR)  &kp LS(RPAR)  &trans  &trans
-&trans  &trans         &trans  &trans       &trans       &trans  &trans        &trans        &trans  &trans
-                               &kp LS(RET)  &kp SPACE    &trans  &trans
+&trans  &trans            &trans          &trans         &kp DELETE                                &trans            &trans                &trans                 &trans  &trans
+&trans  &kp LS(LG(S))     &trans          &trans         &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS    &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+&trans  &kp C_PLAY_PAUSE  &kp KP_NUMLOCK  &kp C_NEXT     &kp LG(TAB)                               &trans            &trans                &trans                 &trans  &trans
+                                          &kp LS(ENTER)  &kp SPACE                                 &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
             >;
         };
     };
