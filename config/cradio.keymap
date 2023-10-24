@@ -26,6 +26,52 @@
 
             label = "NORSK_AO_CAP";
         };
+        delete_line: delete_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME) &kp BACKSPACE>;
+            label = "DELETE_LINE";
+        };
+        norsk_AE: norsk_AE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_0>,
+                <&macro_release>;
+
+            label = "NORSK_AE";
+        };
+        norsk_AE_CAP: norsk_AE_CAP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_8>,
+                <&macro_release>;
+
+            label = "NORSK_AE_CAP";
+        };
+        norsk_OE: norsk_OE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_8>,
+                <&macro_release>;
+
+            label = "NORSK_OE";
+        };
+        norsk_OE_CAP: norsk_OE_CAP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_6>,
+                <&macro_release>;
+
+            label = "NORSK_OE_CAP";
+        };
     };
 
     behaviors {
@@ -33,9 +79,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_ESC";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE>, <&kp TAB>, <&sys_reset>, <&sys_reset>;
+            bindings = <&kp ESCAPE>, <&kp TAB>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
         };
         Layer_hold: Layer_hold {
             compatible = "zmk,behavior-hold-tap";
@@ -53,7 +99,59 @@
             #binding-cells = <0>;
             bindings = <&norsk_AO>, <&norsk_AO_cap>;
 
-            tapping-term-ms = <170>;
+            tapping-term-ms = <300>;
+        };
+        QUOT_DQUO: QUOT_DQUO {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOT_DQUO";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+
+            tapping-term-ms = <300>;
+        };
+        AE: AE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AE";
+            #binding-cells = <0>;
+            bindings = <&norsk_AE>, <&norsk_AE_CAP>;
+
+            tapping-term-ms = <300>;
+        };
+        OE: OE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OE";
+            #binding-cells = <0>;
+            bindings = <&norsk_OE>, <&norsk_OE_CAP>;
+
+            tapping-term-ms = <300>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        NPP_comment {
+            bindings = <&kp LC(Q)>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        RIGHT_ENT {
+            bindings = <&kp ENTER>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        Arrow_up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        delete_line_combo {
+            bindings = <&delete_line>;
+            key-positions = <30 31>;
+            layers = <0>;
         };
     };
 
@@ -71,10 +169,10 @@
 
         layer_1 {
             bindings = <
-&caps_esc  &kp F9      &trans     &trans      &trans    &trans             &kp UP             &trans       &trans         &kp LS(CARET)
-&AO        &kp LSHIFT  &kp LCTRL  &trans      &trans    &kp LEFT           &kp DOWN           &kp RIGHT    &kp LS(DLLR)   &kp LS(POUND)
-&trans     &trans      &trans     &trans      &trans    &trans             &kp LS(LEFT)       &kp LA(END)  &kp LS(PRCNT)  &kp BSLH
-                                  &kp LS(AT)  &trans    &kp LS(LC(SPACE))  &kp LS(LC(SPACE))
+&caps_esc   &kp F9      &AE        &trans      &QUOT_DQUO    &trans             &kp UP             &trans       &OE            &kp LS(CARET)
+&AO         &kp LSHIFT  &kp LCTRL  &trans      &trans        &kp LEFT           &kp DOWN           &kp RIGHT    &kp LS(DLLR)   &kp LS(POUND)
+&kp LS(F3)  &trans      &trans     &trans      &trans        &trans             &kp LS(LEFT)       &kp LA(END)  &kp LS(PRCNT)  &kp BSLH
+                                   &kp LS(AT)  &trans        &kp LS(LC(SPACE))  &kp LS(LC(SPACE))
             >;
         };
 
