@@ -173,19 +173,20 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_ESC";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE>, <&kp TAB>;
+            bindings = <&kp ESCAPE>, <&kp CAPS>;
 
             tapping-term-ms = <300>;
         };
-        Layer_hold: Layer_hold {
+        ht_tap: HT_TAP {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_HOLD";
-            bindings = <&lt>, <&kp>;
+            label = "HT_TAP";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <31>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
         };
         AO: AO {
             compatible = "zmk,behavior-tap-dance";
@@ -267,6 +268,44 @@
 
             tapping-term-ms = <165>;
         };
+        ht_hold: ht_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+        };
+        B_USB: B_USB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_USB";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&out OUT_USB>;
+
+            tapping-term-ms = <160>;
+        };
+        layer_tap: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+        };
+        V_BLE: V_BLE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "V_BLE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&out OUT_USB>;
+
+            tapping-term-ms = <160>;
+        };
     };
 
     combos {
@@ -302,10 +341,10 @@
 
         layer_0 {
             bindings = <
-&kp Q  &kp W            &kp F            &kp P            &EXC_G             &QUE_J                       &kp L              &kp U      &kp Y    &kp SEMI
-&kp A  &Layer_hold 4 R  &Layer_hold 5 S  &Layer_hold 2 T  &mt LEFT_GUI D     &kp H                        &kp N              &kp E      &kp I    &kp O
-&kp Z  &mt LEFT_ALT X   &kp C            &kp V            &out OUT_USB       &kp K                        &kp M              &kp COMMA  &kp DOT  &mt LSHFT SLASH
-                                         &mt LCTRL ENTER  &lt 1 BACKSPACE    &SHFT_SPC RIGHT_SHIFT SPACE  &Layer_hold 3 TAB
+&kp Q                 &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y    &kp SEMI
+&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &mt LEFT_GUI D            &kp H                      &kp N             &kp E      &kp I    &kp O
+&kp Z                 &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &kp DOT  &mt LSHFT SLASH
+                                                   &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
             >;
         };
 
