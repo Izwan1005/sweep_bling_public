@@ -165,7 +165,11 @@
                 <&macro_wait_time 50>,
                 <&kp ENTER>,
                 <&macro_wait_time 50>,
-                <&kp TAB>;
+                <&kp TAB>,
+                <&macro_wait_time 3000>,
+                <&kp O &kp N>,
+                <&macro_wait_time 150>,
+                <&kp TAB &kp TAB>;
 
             label = "INS_TAB";
         };
