@@ -16,7 +16,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp KP_NUMBER_9>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_AO";
         };
@@ -28,7 +29,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_7>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_AO_CAP";
         };
@@ -46,7 +48,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_0>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_AE";
         };
@@ -58,7 +61,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_8>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_AE_CAP";
         };
@@ -70,7 +74,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_8>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_OE";
         };
@@ -82,7 +87,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_6>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "NORSK_OE_CAP";
         };
@@ -94,7 +100,8 @@
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_6>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "DEGREE";
         };
@@ -146,19 +153,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
                 <&kp LEFT_ALT>,
                 <&macro_wait_time 200>,
-                <&macro_tap>,
                 <&kp S>,
                 <&macro_wait_time 50>,
                 <&kp R>,
                 <&macro_wait_time 50>,
                 <&kp F>,
                 <&macro_wait_time 50>,
-                <&kp F &kp I &kp G>,
-                <&macro_tap>,
-                <&kp TAB>,
+                <&kp F &kp I &kp G &kp TAB>,
                 <&macro_wait_time 700>,
                 <&kp O &kp N>,
                 <&macro_wait_time 200>,
@@ -332,6 +335,12 @@
         delete_line_combo {
             bindings = <&delete_line>;
             key-positions = <30 31>;
+            layers = <0>;
+        };
+
+        numlock {
+            bindings = <&kp KP_NUMLOCK>;
+            key-positions = <23 24>;
             layers = <0>;
         };
     };
