@@ -142,10 +142,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT>,
-                <&macro_wait_time 500>,
                 <&macro_tap>,
-                <&kp LS(A) &kp D &kp A &kp M &kp LS(A) &kp V &kp A &kp N2 &kp N1 &kp N2 &kp N2 &kp ENTER>;
+                <&kp RIGHT &kp LS(A) &kp D &kp A &kp M &kp LS(A) &kp V &kp A &kp N2 &kp N1 &kp N2 &kp N2 &kp ENTER>;
 
             label = "IKM_PC";
         };
@@ -359,7 +357,7 @@
 
         layer_1 {
             bindings = <
-&caps_esc   &kp F9      &AE        &trans      &QUOT_DQUO    &AMP_CURL          &kp UP             &UND_MINS  &OE          &kp CARET
+&caps_esc   &kp F9      &AE        &INS_TAB    &QUOT_DQUO    &AMP_CURL          &kp UP             &UND_MINS  &OE          &kp CARET
 &AO         &kp LSHIFT  &kp LCTRL  &trans      &IKM_PC       &kp LEFT           &kp DOWN           &kp RIGHT  &kp DOLLAR   &kp HASH
 &kp LS(F3)  &trans      &trans     &trans      &IKM_ADMIN    &SUB_SUP           &kp LS(LEFT)       &degree    &kp PERCENT  &kp BSLH
                                    &kp LS(AT)  &trans        &kp LS(LC(SPACE))  &kp LS(LC(MINUS))
