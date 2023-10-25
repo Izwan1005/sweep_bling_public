@@ -159,12 +159,20 @@
                 <&macro_wait_time 50>,
                 <&kp F>,
                 <&macro_wait_time 50>,
-                <&kp T &kp A &kp B &kp TAB>,
+                <&kp T>,
                 <&macro_wait_time 50>,
+                <&kp A>,
+                <&macro_wait_time 50>,
+                <&kp B>,
+                <&macro_wait_time 50>,
+                <&kp TAB>,
+                <&macro_wait_time 700>,
                 <&kp O>,
                 <&macro_wait_time 50>,
                 <&kp N>,
                 <&macro_wait_time 200>,
+                <&kp TAB>,
+                <&macro_wait_time 50>,
                 <&kp TAB>;
 
             label = "INS_TAB";
