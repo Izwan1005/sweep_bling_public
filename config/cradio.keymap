@@ -161,6 +161,7 @@
                 <&macro_wait_time 50>,
                 <&kp F &kp I &kp G &kp TAB>,
                 <&macro_wait_time 700>,
+                <&macro_tap>,
                 <&kp O &kp N>,
                 <&macro_wait_time 200>,
                 <&kp TAB>;
