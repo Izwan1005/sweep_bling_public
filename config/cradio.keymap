@@ -168,9 +168,9 @@
                 <&kp TAB>,
                 <&macro_wait_time 700>,
                 <&macro_tap>,
-                <&kp O &kp N>,
+                <&kp DOWN>,
                 <&macro_wait_time 150>,
-                <&kp TAB &kp TAB>;
+                <&kp DOWN_ARROW &kp TAB &kp TAB>;
 
             label = "INS_TAB";
         };
@@ -189,7 +189,7 @@
                 <&kp G>,
                 <&macro_wait_time 50>,
                 <&kp TAB>,
-                <&macro_wait_time 700>,
+                <&macro_wait_time 50>,
                 <&kp O>,
                 <&macro_wait_time 50>,
                 <&kp N>,
