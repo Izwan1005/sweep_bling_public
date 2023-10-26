@@ -147,38 +147,11 @@
 
             label = "IKM_PC";
         };
-        INS_TAB: INS_TAB {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&kp S>,
-                <&macro_wait_time 50>,
-                <&kp R>,
-                <&macro_wait_time 50>,
-                <&kp F>,
-                <&macro_wait_time 50>,
-                <&kp T>,
-                <&macro_wait_time 50>,
-                <&kp A>,
-                <&macro_wait_time 50>,
-                <&kp TAB>,
-                <&macro_wait_time 700>,
-                <&macro_tap>,
-                <&kp DOWN>,
-                <&macro_wait_time 150>,
-                <&kp DOWN_ARROW &kp TAB &kp TAB>;
-
-            label = "INS_TAB";
-        };
         INS_FIG: INS_FIG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <150>;
+            tap-ms = <150>;
             bindings =
                 <&kp LC(LA(R))>,
                 <&macro_wait_time 200>,
@@ -190,13 +163,37 @@
                 <&macro_wait_time 50>,
                 <&kp TAB>,
                 <&macro_wait_time 800>,
-                <&kp O>,
+                <&kp DOWN>,
                 <&macro_wait_time 150>,
-                <&kp N>,
+                <&kp DOWN_ARROW>,
                 <&macro_wait_time 150>,
                 <&kp TAB &kp TAB>;
 
             label = "INS_FIG";
+        };
+        INS_TAB: INS_TAB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LC(LA(R))>,
+                <&macro_wait_time 200>,
+                <&kp T>,
+                <&macro_wait_time 50>,
+                <&kp A>,
+                <&macro_wait_time 50>,
+                <&kp B>,
+                <&macro_wait_time 50>,
+                <&kp TAB>,
+                <&macro_wait_time 800>,
+                <&kp DOWN>,
+                <&macro_wait_time 150>,
+                <&kp DOWN_ARROW>,
+                <&macro_wait_time 150>,
+                <&kp TAB &kp TAB>;
+
+            label = "INS_TAB";
         };
     };
 
@@ -371,6 +368,11 @@
             bindings = <&kp KP_NUMLOCK>;
             key-positions = <23 24>;
             layers = <0>;
+        };
+
+        LEFT_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
         };
     };
 
