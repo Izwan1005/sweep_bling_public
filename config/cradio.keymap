@@ -162,7 +162,7 @@
                 <&kp G>,
                 <&macro_wait_time 50>,
                 <&kp TAB>,
-                <&macro_wait_time 800>,
+                <&macro_wait_time 300>,
                 <&kp DOWN>,
                 <&macro_wait_time 150>,
                 <&kp DOWN_ARROW>,
@@ -186,7 +186,7 @@
                 <&kp B>,
                 <&macro_wait_time 50>,
                 <&kp TAB>,
-                <&macro_wait_time 800>,
+                <&macro_wait_time 300>,
                 <&kp DOWN>,
                 <&macro_wait_time 150>,
                 <&kp DOWN_ARROW>,
@@ -194,6 +194,32 @@
                 <&kp TAB &kp TAB>;
 
             label = "INS_TAB";
+        };
+        INS_REF: INS_REF {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LC(LA(R))>,
+                <&macro_wait_time 200>,
+                <&kp N>,
+                <&macro_wait_time 50>,
+                <&kp U>,
+                <&macro_wait_time 50>,
+                <&kp M>,
+                <&macro_wait_time 50>,
+                <&kp TAB>,
+                <&macro_wait_time 300>,
+                <&kp DOWN>,
+                <&macro_wait_time 150>,
+                <&kp DOWN_ARROW>,
+                <&macro_wait_time 150>,
+                <&kp DOWN_ARROW>,
+                <&macro_wait_time 150>,
+                <&kp TAB &kp TAB>;
+
+            label = "INS_REF";
         };
     };
 
@@ -392,7 +418,7 @@
             bindings = <
 &caps_esc   &kp F9      &AE        &INS_TAB    &QUOT_DQUO    &AMP_CURL          &kp UP             &UND_MINS  &OE          &kp CARET
 &AO         &kp LSHIFT  &kp LCTRL  &INS_FIG    &IKM_PC       &kp LEFT           &kp DOWN           &kp RIGHT  &kp DOLLAR   &kp HASH
-&kp LS(F3)  &trans      &trans     &trans      &IKM_ADMIN    &SUB_SUP           &kp LS(LEFT)       &degree    &kp PERCENT  &kp BSLH
+&kp LS(F3)  &trans      &trans     &INS_REF    &IKM_ADMIN    &SUB_SUP           &kp LS(LEFT)       &degree    &kp PERCENT  &kp BSLH
                                    &kp LS(AT)  &trans        &kp LS(LC(SPACE))  &kp LS(LC(MINUS))
             >;
         };
