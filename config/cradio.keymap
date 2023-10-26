@@ -410,6 +410,16 @@
             bindings = <&bootloader>;
             key-positions = <5 15 25>;
         };
+
+        reset_left {
+            bindings = <&sys_reset>;
+            key-positions = <2 12 22>;
+        };
+
+        reset_right {
+            bindings = <&sys_reset>;
+            key-positions = <7 17 27>;
+        };
     };
 
     keymap {
