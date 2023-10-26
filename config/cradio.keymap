@@ -380,7 +380,7 @@
         layer_0 {
             bindings = <
 &kp Q                 &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y    &kp SEMI
-&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &mt LEFT_GUI D            &kp H                      &kp N             &kp E      &kp I    &kp O
+&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I    &kp O
 &kp Z                 &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &kp DOT  &mt LSHFT SLASH
                                                    &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
             >;
