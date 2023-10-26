@@ -400,6 +400,16 @@
             bindings = <&kp TAB>;
             key-positions = <2 3>;
         };
+
+        bootloader_left {
+            bindings = <&bootloader>;
+            key-positions = <4 14 24>;
+        };
+
+        bootloader_right {
+            bindings = <&bootloader>;
+            key-positions = <5 15 25>;
+        };
     };
 
     keymap {
