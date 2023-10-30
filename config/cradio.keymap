@@ -453,10 +453,10 @@
 
         layer_1 {
             bindings = <
-&caps_esc   &kp F9      &AE        &INS_TAB    &QUOT_DQUO    &AMP_CURL         &kp UP         &UND_MINS  &OE          &kp CARET
-&AO         &kp LSHIFT  &kp LCTRL  &INS_FIG    &IKM_PC       &kp LEFT          &kp DOWN       &kp RIGHT  &kp DOLLAR   &kp HASH
-&kp LS(F3)  &kp K_MENU  &INS_CAP   &INS_REF    &IKM_ADMIN    &kp LS(LEFT)      &SUB_SUP       &degree    &kp PERCENT  &kp BSLH
-                                   &kp LS(AT)  &trans        &kp LS(LC(LEFT))  &non_breaking
+&caps_esc   &kp F9              &AE        &INS_TAB    &QUOT_DQUO    &AMP_CURL         &kp UP         &UND_MINS  &OE          &kp CARET
+&AO         &kp LSHIFT          &kp LCTRL  &INS_FIG    &IKM_PC       &kp LEFT          &kp DOWN       &kp RIGHT  &kp DOLLAR   &kp HASH
+&kp LS(F3)  &kp K_CONTEXT_MENU  &INS_CAP   &INS_REF    &IKM_ADMIN    &kp LS(LEFT)      &SUB_SUP       &degree    &kp PERCENT  &kp BSLH
+                                           &kp LS(AT)  &trans        &kp LS(LC(LEFT))  &non_breaking
             >;
         };
 
