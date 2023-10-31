@@ -230,6 +230,22 @@
             label = "INS_CAP";
             wait-ms = <150>;
         };
+        Excel_newRow: Excel_newRow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LS(SPACE)>,
+                <&macro_wait_time 200>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&kp I>,
+                <&macro_wait_time 200>,
+                <&kp R>;
+
+            label = "EXCEL_NEWROW";
+        };
     };
 
     behaviors {
@@ -462,7 +478,7 @@
 
         layer_2 {
             bindings = <
-&kp LEFT                 &kp RIGHT              &kp F2     &kp LA(LC(DEL))  &kp LC(ASTRK)        &kp PLUS   &kp N1   &kp N2  &kp N3  &kp STAR
+&Excel_newRow            &kp LC(KP_PLUS)        &kp F2     &kp LA(LC(DEL))  &kp LC(ASTRK)        &kp PLUS   &kp N1   &kp N2  &kp N3  &kp STAR
 &ht_tap LEFT_SHIFT LEFT  &kp RIGHT_ARROW        &kp LCTRL  &trans           &kp C_VOLUME_UP      &kp MINUS  &kp N4   &kp N5  &kp N6  &kp FSLH
 &kp LC(LS(N))            &ht_tap LEFT_ALT C_PP  &kp EXCL   &kp UP_ARROW     &kp C_VOLUME_DOWN    &kp DOT    &kp N7   &kp N8  &kp N9  &kp EQUAL
                                                            &kp DOWN         &kp LC(BSPC)         &kp N0     &kp TAB
