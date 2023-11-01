@@ -416,26 +416,43 @@
         LEFT_TAB {
             bindings = <&kp TAB>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         bootloader_left {
             bindings = <&bootloader>;
             key-positions = <4 14 24>;
+            layers = <0>;
         };
 
         bootloader_right {
             bindings = <&bootloader>;
             key-positions = <5 15 25>;
+            layers = <0>;
         };
 
         reset_left {
             bindings = <&sys_reset>;
             key-positions = <2 12 22>;
+            layers = <0>;
         };
 
         reset_right {
             bindings = <&sys_reset>;
             key-positions = <7 17 27>;
+            layers = <0>;
+        };
+
+        QUES {
+            bindings = <&kp QUESTION>;
+            key-positions = <5 6>;
+            layers = <0>;
+        };
+
+        EXCLAM {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <3 4>;
+            layers = <0>;
         };
     };
 
