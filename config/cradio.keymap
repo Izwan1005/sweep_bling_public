@@ -134,7 +134,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp DOT &kp BSLH &kp A &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp TAB &kp N2 &kp LS(J) &kp A &kp N7 &kp LS(A) &kp LS(V) &kp N5 &kp N2 &kp ENTER>;
+                <&kp DOT &kp BSLH &kp A &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp TAB>;
 
             label = "IKM_ADMIN";
         };
@@ -229,22 +229,6 @@
             bindings = <&kp LEFT_ALT &kp S &kp P>;
             label = "INS_CAP";
             wait-ms = <150>;
-        };
-        Excel_newRow: Excel_newRow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <150>;
-            tap-ms = <150>;
-            bindings =
-                <&kp LS(SPACE)>,
-                <&macro_wait_time 200>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&kp I>,
-                <&macro_wait_time 200>,
-                <&kp R>;
-
-            label = "EXCEL_NEWROW";
         };
     };
 
@@ -453,16 +437,6 @@
             bindings = <&sys_reset>;
             key-positions = <7 17 27>;
         };
-
-        bluetooth_pref {
-            bindings = <&out OUT_BLE>;
-            key-positions = <23 30>;
-        };
-
-        USB_preference {
-            bindings = <&out OUT_USB>;
-            key-positions = <24 31>;
-        };
     };
 
     keymap {
@@ -470,9 +444,9 @@
 
         layer_0 {
             bindings = <
-&kp Q                 &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y    &kp SEMI
-&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I    &ht_tap RIGHT_SHIFT O
-&kp Z                 &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &kp DOT  &mt RCTRL SLASH
+&kp Q                 &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y          &kp SEMI
+&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &ht_tap RIGHT_SHIFT O
+&kp Z                 &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &layer_tap 3 SLASH
                                                    &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
             >;
         };
