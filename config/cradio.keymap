@@ -504,7 +504,7 @@
             >;
         };
 
-        layer_6 {
+        layer_5 {
             bindings = <
 &trans  &trans         &trans          &trans         &kp DELETE     &trans            &trans                &trans                 &trans  &trans
 &trans  &kp LS(LG(S))  &trans          &kp LG(TAB)    &kp LA(TAB)    &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
