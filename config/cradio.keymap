@@ -461,10 +461,10 @@
 
         layer_0 {
             bindings = <
-&kp Q                 &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y          &kp SEMI
-&ht_tap LEFT_SHIFT A  &lt 4 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &ht_tap RIGHT_SHIFT O
-&kp Z                 &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &layer_tap 3 SLASH
-                                                   &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
+&kp Q    &kp W               &kp F    &kp P                 &EXC_G                    &QUE_J                     &kp L             &kp U      &kp Y          &kp SEMI
+&lt 6 A  &lt 4 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &ht_tap RIGHT_SHIFT O
+&kp Z    &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &layer_tap 3 SLASH
+                                      &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
             >;
         };
 
@@ -510,6 +510,15 @@
 &trans  &kp LS(LG(S))  &trans          &kp LG(TAB)    &kp LA(TAB)    &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
 &trans  &trans         &kp KP_NUMLOCK  &trans         &trans         &trans            &trans                &trans                 &trans  &trans
                                        &kp LS(ENTER)  &kp SPACE      &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp     &kp             &kp UP_ARROW      &kp                     &kp                           &kp KP_PLUS      &kp N1   &kp N2  &kp N3  &kp KP_MULTIPLY
+&trans  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT               &kp C_VOLUME_UP               &kp KP_SUBTRACT  &kp N4   &kp N5  &kp N6  &kp KP_DIVIDE
+&kp     &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_VOLUME_DOWN             &kp KP_DOT       &kp N7   &kp N8  &kp N9  &kp EQUAL
+                                          &kp LS(LC(LEFT_ARROW))  &ht_tap LEFT_ALT BACKSPACE    &kp NUMBER_0     &kp TAB
             >;
         };
     };
