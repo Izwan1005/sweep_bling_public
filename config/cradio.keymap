@@ -455,7 +455,7 @@
             bindings = <
 &kp Q    &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y          &kp SEMI
 &lt 6 A  &lt 3 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
-&kp Z    &ht_tap LEFT_ALT X  &kp C    &V_BLE                &B_USB                    &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &ht_tap RIGHT_SHIFT SLASH
+&kp Z    &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &ht_tap RIGHT_SHIFT SLASH
                                       &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
             >;
         };
@@ -471,28 +471,28 @@
 
         layer_2 {
             bindings = <
-&trans         &trans    &kp F2  &trans     &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
-&trans         &trans    &trans  &trans     &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
-&kp LC(LS(N))  &kp LALT  &trans  &trans     &trans           &trans     &kp F7  &kp F8  &kp F9  &kp F12
-                                 &kp LCTRL  &kp LC(BSPC)     &kp LSHFT  &trans
+&trans         &trans    &kp F2           &trans             &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
+&trans         &trans    &kp EXCLAMATION  &trans             &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&kp LC(LS(N))  &kp LALT  &trans           &trans             &trans           &trans     &kp F7  &kp F8  &kp F9  &kp F12
+                                          &ht_tap LCTRL TAB  &kp LC(BSPC)     &kp LSHFT  &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp LALT   &kp F1  &kp F2  &kp F3    &kp F10    &trans  &kp PG_UP  &trans    &trans    &trans
-&kp LCTRL  &kp F4  &kp F5  &kp F6    &kp F11    &trans  &kp PG_DN  &trans    &trans    &trans
-&kp LSHFT  &kp F7  &kp F8  &kp F9    &kp F12    &trans  &par_mid   &brc_mid  &brk_mid  &trans
-                           &kp HOME  &kp END    &email  &trans
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &kp PG_UP  &trans    &trans    &trans
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &kp PG_DN  &trans    &trans    &trans
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &par_mid   &brc_mid  &brk_mid  &trans
+                           &kp TAB  &kp TAB    &email  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &bt BT_CLR  &bt BT_SEL 3  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &bt BT_SEL 4  &bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                            &bt BT_PRV    &bt BT_NXT      &trans  &trans
+&trans  &trans  &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                              &bt BT_PRV    &bt BT_NXT      &trans  &trans
             >;
         };
 
