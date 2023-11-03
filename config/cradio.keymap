@@ -228,6 +228,12 @@
             label = "INS_CAP";
             wait-ms = <150>;
         };
+        NOR_ID: NOR_ID {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N0 &kp N1 &kp N0 &kp N9 &kp N9 &kp N3 &kp N2 &kp N3 &kp N7 &kp N2 &kp N4>;
+            label = "NOR_ID";
+        };
     };
 
     behaviors {
@@ -376,6 +382,22 @@
 
             tapping-term-ms = <300>;
         };
+        CTRL_at: CTRL_at {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_AT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+        SHFT_ID: SHFT_ID {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHFT_ID";
+            bindings = <&kp>, <&NOR_ID>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -462,10 +484,10 @@
 
         layer_1 {
             bindings = <
-&caps_esc   &kp F9      &AE        &INS_TAB    &QUOT_DQUO    &AMP_CURL         &kp UP         &UND_MINS  &OE          &kp CARET
-&AO         &kp LSHIFT  &kp LCTRL  &INS_FIG    &IKM_PC       &kp LEFT          &kp DOWN       &kp RIGHT  &kp DOLLAR   &kp HASH
-&kp LS(F3)  &kp K_MENU  &INS_CAP   &INS_REF    &IKM_ADMIN    &kp LS(LEFT)      &SUB_SUP       &degree    &kp PERCENT  &kp BSLH
-                                   &kp LS(AT)  &trans        &kp LS(LC(LEFT))  &non_breaking
+&caps_esc   &kp F9                 &AE                     &INS_TAB  &QUOT_DQUO    &AMP_CURL         &kp UP         &UND_MINS  &OE          &kp CARET
+&AO         &SHFT_ID LEFT_SHIFT 0  &CTRL_at LCTRL AT_SIGN  &INS_FIG  &IKM_PC       &kp LEFT          &kp DOWN       &kp RIGHT  &kp DOLLAR   &kp HASH
+&kp LS(F3)  &none                  &INS_CAP                &INS_REF  &IKM_ADMIN    &non_breaking     &SUB_SUP       &degree    &kp PERCENT  &kp BSLH
+                                                           &none     &trans        &kp LS(LC(LEFT))  &non_breaking
             >;
         };
 
@@ -480,37 +502,37 @@
 
         layer_3 {
             bindings = <
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &kp PG_UP  &trans    &trans    &trans
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &kp PG_DN  &trans    &trans    &trans
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &trans  &par_mid   &brc_mid  &brk_mid  &trans
-                           &kp TAB  &kp TAB    &email  &trans
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_UP  &none     &none     &none
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_DN  &none     &none     &none
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &par_mid   &brc_mid  &brk_mid  &none
+                           &kp TAB  &kp TAB    &email  &none
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                              &bt BT_PRV    &bt BT_NXT      &trans  &trans
+&none  &none  &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &none  &none  &none  &none  &none
+&none  &none  &none         &bt BT_SEL 4  &bt BT_SEL 1    &none  &none  &none  &none  &none
+&none  &none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 2    &none  &none  &none  &none  &none
+                            &bt BT_PRV    &bt BT_NXT      &none  &none
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &trans         &trans  &trans         &kp DELETE     &trans            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans
-&trans  &kp LS(LG(S))  &trans  &kp LG(TAB)    &kp LA(TAB)    &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans         &trans  &trans         &trans         &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans
-                               &kp LS(ENTER)  &kp SPACE      &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+&none  &none          &none  &none          &kp DELETE     &none             &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none
+&none  &kp LS(LG(S))  &none  &kp LG(TAB)    &kp LA(TAB)    &none             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
+&none  &none          &none  &none          &none          &none             &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none
+                             &kp LS(ENTER)  &kp SPACE      &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
             >;
         };
 
         layer_6 {
             bindings = <
-&kp KP_NUMLOCK      &kp HOME                 &kp UP_ARROW      &kp END                           &kp TAB                       &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY
-&trans              &kp LEFT_ARROW           &kp DOWN          &kp RIGHT                         &kp C_VOLUME_UP               &kp KP_SUBTRACT                  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_N6        &kp KP_DIVIDE
-&kp LA(LC(DELETE))  &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT                        &kp C_VOLUME_DOWN             &kp KP_DOT                       &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_EQUAL
-                                                               &ht_tap LCTRL LS(LC(LEFT_ARROW))  &ht_tap LEFT_ALT BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
+&kp KP_NUMLOCK      &kp HOME                 &kp UP_ARROW      &kp END                 &kp TAB                       &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY
+&none               &kp LEFT_ARROW           &kp DOWN          &kp RIGHT               &kp C_VOLUME_UP               &kp KP_SUBTRACT                  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_N6        &kp KP_DIVIDE
+&kp LA(LC(DELETE))  &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_VOLUME_DOWN             &kp KP_DOT                       &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_EQUAL
+                                                               &ht_tap LCTRL KP_ENTER  &ht_tap LEFT_ALT BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
             >;
         };
     };
