@@ -491,7 +491,7 @@
             >;
         };
 
-        layer_2 {
+        Functions {
             bindings = <
 &trans         &trans    &kp F2           &trans             &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
 &trans         &trans    &kp EXCLAMATION  &trans             &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
@@ -502,9 +502,9 @@
 
         layer_3 {
             bindings = <
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_UP  &none     &none     &none
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_DN  &none     &none     &none
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &par_mid   &brc_mid  &brk_mid  &none
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_UP  &none  &none  &none
+&kp TAB  &trans   &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_DN  &none  &none  &none
+&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &none      &none  &none  &none
                            &kp TAB  &kp TAB    &email  &none
             >;
         };
@@ -520,9 +520,9 @@
 
         layer_5 {
             bindings = <
-&none  &none          &none  &none          &kp DELETE     &none             &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none
-&none  &kp LS(LG(S))  &none  &kp LG(TAB)    &kp LA(TAB)    &none             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
-&none  &none          &none  &none          &none          &none             &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none
+&none  &none          &none  &none          &kp DELETE     &brk_mid          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &kp CARET
+&none  &kp LS(LG(S))  &none  &kp LG(TAB)    &kp LA(TAB)    &par_mid          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH
+&none  &none          &none  &none          &none          &brc_mid          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT  &kp BACKSLASH
                              &kp LS(ENTER)  &kp SPACE      &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
             >;
         };
