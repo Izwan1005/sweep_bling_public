@@ -504,9 +504,9 @@
 
         Macros {
             bindings = <
-&kp ESCAPE  &kp CAPSLOCK                   &AE                        &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9         &degree  &OE    &kp DELETE
-&AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)     &none    &none  &none
-&INS_ROW    &INS_COL                       &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP       &none    &none  &none
+&kp ESCAPE  &kp CAPSLOCK                   &trans                     &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9         &degree  &trans  &kp DELETE
+&AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)     &AE      &none   &OE
+&INS_ROW    &INS_COL                       &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP       &none    &none   &none
                                                                       &email    &trans        &non_breaking       &non_breaking
             >;
         };
