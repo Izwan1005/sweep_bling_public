@@ -473,7 +473,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        Base {
             bindings = <
 &kp Q    &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y          &kp SEMI
 &lt 6 A  &lt 3 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
@@ -482,34 +482,34 @@
             >;
         };
 
-        layer_1 {
+        Macros {
             bindings = <
-&caps_esc   &kp F9                 &AE                     &INS_TAB  &QUOT_DQUO    &AMP_CURL         &kp LC(UP)     &UND_MINS      &OE          &kp CARET
-&AO         &SHFT_ID LEFT_SHIFT 0  &CTRL_at LCTRL AT_SIGN  &INS_FIG  &IKM_PC       &kp LC(LEFT)      &kp LC(DOWN)   &kp LC(RIGHT)  &kp DOLLAR   &kp HASH
-&kp LS(F3)  &none                  &INS_CAP                &INS_REF  &IKM_ADMIN    &non_breaking     &SUB_SUP       &degree        &kp PERCENT  &kp BSLH
-                                                           &none     &trans        &kp LS(LC(LEFT))  &non_breaking
+&kp ESCAPE  &kp CAPSLOCK                   &AE                        &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9         &degree  &OE    &none
+&AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)     &none    &none  &none
+&none       &none                          &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP       &none    &none  &none
+                                                                      &email    &trans        &non_breaking       &non_breaking
             >;
         };
 
         Functions {
             bindings = <
-&trans         &trans    &kp F2           &trans             &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
-&trans         &trans    &kp EXCLAMATION  &trans             &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
-&kp LC(LS(N))  &kp LALT  &trans           &trans             &trans           &trans     &kp F7  &kp F8  &kp F9  &kp F12
-                                          &ht_tap LCTRL TAB  &kp LC(BSPC)     &kp LSHFT  &trans
+&trans         &trans       &kp F2   &trans                &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
+&kp LA(TAB)    &kp LG(TAB)  &kp TAB  &trans                &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&kp LC(LS(N))  &kp LALT     &trans   &trans                &trans           &trans     &kp F7  &kp F8  &kp F9  &kp F12
+                                     &ht_tap LCTRL DELETE  &kp LC(BSPC)     &kp LSHFT  &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_UP  &none  &none  &none
-&kp TAB  &trans   &kp TAB  &kp TAB  &kp TAB    &none   &kp PG_DN  &none  &none  &none
-&kp TAB  &kp TAB  &kp TAB  &kp TAB  &kp TAB    &none   &none      &none  &none  &none
-                           &kp TAB  &kp TAB    &email  &none
+&trans  &trans  &trans  &trans  &trans    &none   &kp PG_UP  &none  &none  &none
+&trans  &trans  &trans  &trans  &trans    &none   &kp PG_DN  &none  &none  &none
+&trans  &trans  &trans  &trans  &trans    &none   &none      &none  &none  &none
+                        &trans  &trans    &email  &none
             >;
         };
 
-        layer_4 {
+        Bluetooth {
             bindings = <
 &none  &none  &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &none  &none  &none  &none  &none
 &none  &none  &none         &bt BT_SEL 4  &bt BT_SEL 1    &none  &none  &none  &none  &none
@@ -518,16 +518,16 @@
             >;
         };
 
-        layer_5 {
+        Symbol {
             bindings = <
-&none  &none          &none  &none          &kp DELETE     &brk_mid          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &kp CARET
-&none  &kp LS(LG(S))  &none  &kp LG(TAB)    &kp LA(TAB)    &par_mid          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH
-&none  &none          &none  &none          &none          &brc_mid          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT  &kp BACKSLASH
-                             &kp LS(ENTER)  &kp SPACE      &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+&none  &none          &none  &kp AT_SIGN        &kp MINUS         &brk_mid      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
+&none  &kp LS(LG(S))  &none  &kp SINGLE_QUOTE   &kp UNDERSCORE    &par_mid      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &kp HASH
+&none  &none          &none  &kp DOUBLE_QUOTES  &kp TILDE         &brc_mid      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
+                             &kp EXCLAMATION    &kp SPACE         &kp QUESTION  &trans
             >;
         };
 
-        layer_6 {
+        Numbers {
             bindings = <
 &kp KP_NUMLOCK      &kp HOME                 &kp UP_ARROW      &kp END                 &kp TAB                       &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY
 &none               &kp LEFT_ARROW           &kp DOWN          &kp RIGHT               &kp C_VOLUME_UP               &kp KP_SUBTRACT                  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_N6        &kp KP_DIVIDE
