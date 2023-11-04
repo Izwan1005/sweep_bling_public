@@ -476,9 +476,9 @@
         Base {
             bindings = <
 &kp Q    &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y          &kp SEMI
-&lt 6 A  &lt 3 R             &lt 5 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
+&lt 5 A  &lt 3 R             &lt 4 S  &lt 2 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
 &kp Z    &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &ht_tap RIGHT_SHIFT SLASH
-                                      &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 3 TAB
+                                      &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 0 TAB
             >;
         };
 
@@ -500,21 +500,12 @@
             >;
         };
 
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &none   &kp PG_UP  &none  &none  &none
-&trans  &trans  &trans  &trans  &trans    &none   &kp PG_DN  &none  &none  &none
-&trans  &trans  &trans  &trans  &trans    &none   &none      &none  &none  &none
-                        &trans  &trans    &email  &none
-            >;
-        };
-
         Bluetooth {
             bindings = <
-&none  &none  &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &none  &none  &none  &none  &none
-&none  &none  &none         &bt BT_SEL 4  &bt BT_SEL 1    &none  &none  &none  &none  &none
-&none  &none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 2    &none  &none  &none  &none  &none
-                            &bt BT_PRV    &bt BT_NXT      &none  &none
+&none  &none   &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 0    &none  &none  &none  &none  &none
+&none  &trans  &none         &bt BT_SEL 4  &bt BT_SEL 1    &none  &none  &none  &none  &none
+&none  &none   &out OUT_USB  &out OUT_BLE  &bt BT_SEL 2    &none  &none  &none  &none  &none
+                             &bt BT_PRV    &bt BT_NXT      &none  &none
             >;
         };
 
@@ -541,8 +532,8 @@
         compatible = "zmk,conditional-layers";
 
         Bluetooth {
-            if-layers = <6 3>;
-            then-layer = <4>;
+            if-layers = <5 3>;
+            then-layer = <3>;
         };
     };
 };
