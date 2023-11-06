@@ -496,16 +496,16 @@
 
         Base {
             bindings = <
-&kp Q    &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y          &lt 6 SEMICOLON
-&lt 2 A  &lt 3 R             &lt 4 S  &lt 5 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
-&kp Z    &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &ht_tap RIGHT_SHIFT SLASH
-                                      &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 0 TAB
+&kp Q                 &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y          &lt 6 SEMICOLON
+&lt 2 A               &lt 3 R             &lt 4 S  &lt 5 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I          &kp O
+&ht_tap LEFT_SHIFT Z  &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &mt RCTRL DOT  &ht_tap RIGHT_SHIFT SLASH
+                                                   &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 0 TAB
             >;
         };
 
         Macros {
             bindings = <
-&kp ESCAPE  &kp CAPSLOCK                   &kp LC(ASTRK)              &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &trans  &kp DELETE
+&kp ESCAPE  &kp CAPSLOCK                   &none                      &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &trans  &kp DELETE
 &AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none   &OE
 &INS_ROW    &INS_COL                       &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &none    &none   &none
                                                                       &email    &trans        &non_breaking       &kp TAB
@@ -541,10 +541,10 @@
 
         Functions {
             bindings = <
-&trans         &trans       &trans   &trans                &trans          &trans     &kp F1  &kp F2  &kp F3  &kp F10
-&kp LA(TAB)    &kp LG(TAB)  &kp TAB  &trans                &trans          &trans     &kp F4  &kp F5  &kp F6  &kp F11
-&kp LC(LS(N))  &kp LALT     &trans   &trans                &trans          &trans     &kp F7  &kp F8  &kp F9  &kp F12
-                                     &ht_tap LCTRL DELETE  &kp LC(BSPC)    &kp LSHFT  &trans
+&trans         &trans       &kp F2   &trans                &kp LC(ASTRK)    &trans     &kp F1  &kp F2  &kp F3  &kp F10
+&kp LA(TAB)    &kp LG(TAB)  &kp TAB  &trans                &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&kp LC(LS(N))  &kp LALT     &trans   &trans                &trans           &trans     &kp F7  &kp F8  &kp F9  &kp F12
+                                     &ht_tap LCTRL DELETE  &kp LC(BSPC)     &kp LSHFT  &trans
             >;
         };
 
