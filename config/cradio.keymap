@@ -143,7 +143,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp RIGHT &kp RIGHT &kp RIGHT &kp LS(A) &kp D &kp A &kp M &kp LS(A) &kp V &kp A &kp N2 &kp N1 &kp N2 &kp N2 &kp ENTER>;
+                <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp LS(A) &kp D &kp A &kp M &kp LS(A) &kp V &kp A &kp N2 &kp N1 &kp N2 &kp N2 &kp ENTER>;
 
             label = "IKM_PC";
         };
