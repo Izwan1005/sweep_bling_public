@@ -436,12 +436,6 @@
             layers = <0>;
         };
 
-        Arrow_up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
         delete_line_combo {
             bindings = <&delete_line>;
             key-positions = <30 31>;
@@ -457,12 +451,6 @@
         bootloader_left {
             bindings = <&bootloader>;
             key-positions = <4 14 24>;
-            layers = <0>;
-        };
-
-        bootloader_right {
-            bindings = <&bootloader>;
-            key-positions = <5 15 25>;
             layers = <0>;
         };
 
@@ -487,6 +475,30 @@
         EXCLAM {
             bindings = <&kp EXCLAMATION>;
             key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        Arrow_left {
+            bindings = <&kp LEFT>;
+            key-positions = <16 17>;
+            layers = <0>;
+        };
+
+        Arrow_right {
+            bindings = <&kp RIGHT>;
+            key-positions = <17 18>;
+            layers = <0>;
+        };
+
+        Arrow_down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <27 26>;
+            layers = <0>;
+        };
+
+        Arrow_up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <6 7>;
             layers = <0>;
         };
     };
