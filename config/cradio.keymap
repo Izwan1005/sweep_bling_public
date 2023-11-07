@@ -518,6 +518,11 @@
             key-positions = <3 4>;
             layers = <2>;
         };
+
+        NPP_hideline {
+            bindings = <&kp LA(H)>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
