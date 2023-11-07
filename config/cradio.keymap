@@ -512,6 +512,12 @@
             key-positions = <5 6>;
             layers = <2>;
         };
+
+        F2_num {
+            bindings = <&kp F2>;
+            key-positions = <3 4>;
+            layers = <2>;
+        };
     };
 
     keymap {
