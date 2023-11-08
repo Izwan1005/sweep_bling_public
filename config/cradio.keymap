@@ -585,9 +585,9 @@
 
         Symbol {
             bindings = <
-&none      &none          &none   &kp AT_SIGN            &kp MINUS         &brk_mid                 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
-&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE       &kp UNDERSCORE    &par_mid                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &kp HASH
-&none      &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES      &kp TILDE         &brc_mid                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
+&none      &none          &none   &kp HASH               &kp MINUS         &brk_mid                 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
+&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE       &kp UNDERSCORE    &par_mid                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &kp AT
+&kp ASTRK  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES      &kp TILDE         &brc_mid                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
                                   &mt LCTRL EXCLAMATION  &kp SPACE         &mt LEFT_SHIFT QUESTION  &trans
             >;
         };
