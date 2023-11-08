@@ -536,6 +536,12 @@
             bindings = <&kp LA(H)>;
             key-positions = <1 2>;
         };
+
+        SBT_comment {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <11 10>;
+            layers = <0>;
+        };
     };
 
     keymap {
