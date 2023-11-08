@@ -254,6 +254,19 @@
 
             label = "INS_ROW";
         };
+        plusminus: plusminus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PLUSMINUS";
+        };
     };
 
     behaviors {
@@ -539,7 +552,7 @@
 
         Macros {
             bindings = <
-&kp ESCAPE  &kp CAPSLOCK                   &none                      &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &trans  &kp DELETE
+&kp ESCAPE  &kp CAPSLOCK                   &plusminus                 &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &trans  &kp DELETE
 &AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none   &OE
 &INS_ROW    &INS_COL                       &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &none    &none   &none
                                                                       &email    &trans        &non_breaking       &kp TAB
