@@ -283,6 +283,22 @@
             label = "APDL_NODENUMBER";
             wait-ms = <200>;
         };
+        INS_LINK: INS_LINK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&kp N>,
+                <&macro_wait_time 50>,
+                <&kp I>,
+                <&macro_wait_time 50>,
+                <&kp I>;
+
+            label = "INS_LINK";
+        };
     };
 
     behaviors {
@@ -574,10 +590,10 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9                         &plusminus                 &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
-&AO         &mt LEFT_SHIFT LG(LEFT_ARROW)  &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber               &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &none    &none        &none
-                                                                      &email    &trans        &non_breaking       &kp TAB
+&caps_esc   &kp F9            &plusminus                 &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
+&AO         &INS_LINK         &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &none    &none        &none
+                                                         &email    &trans        &non_breaking       &kp TAB
             >;
         };
 
