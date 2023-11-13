@@ -302,12 +302,9 @@
         ACROBAT_accept: ACROBAT_accept {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp F13>,
-                <&macro_wait_time 200>,
-                <&kp DOWN &kp DOWN &kp DOWN &kp RIGHT_ARROW &kp DOWN &kp ENTER>;
-
+            bindings = <&kp F13 &kp DOWN &kp DOWN &kp DOWN &kp RIGHT_ARROW &kp DOWN &kp ENTER>;
             label = "ACROBAT_ACCEPT";
+            wait-ms = <200>;
         };
     };
 
@@ -522,13 +519,13 @@
 
         QUES {
             bindings = <&kp QUESTION>;
-            key-positions = <6 5>;
+            key-positions = <15 16>;
             layers = <0>;
         };
 
         EXCLAM {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
