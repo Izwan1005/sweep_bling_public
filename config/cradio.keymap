@@ -512,13 +512,13 @@
 
         QUES {
             bindings = <&kp QUESTION>;
-            key-positions = <5 6>;
+            key-positions = <6 5>;
             layers = <0>;
         };
 
         EXCLAM {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <3 4>;
+            key-positions = <12 13>;
             layers = <0>;
         };
 
