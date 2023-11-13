@@ -299,6 +299,16 @@
 
             label = "INS_LINK";
         };
+        ACROBAT_accept: ACROBAT_accept {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F13>,
+                <&macro_wait_time 200>,
+                <&kp DOWN &kp DOWN &kp DOWN &kp RIGHT_ARROW &kp DOWN &kp ENTER>;
+
+            label = "ACROBAT_ACCEPT";
+        };
     };
 
     behaviors {
@@ -590,10 +600,10 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &plusminus                 &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
-&AO         &INS_LINK         &mt LCTRL LG(RIGHT_ARROW)  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber  &INS_CAP                   &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &kp F13  &none        &none
-                                                         &email    &trans        &non_breaking       &kp TAB
+&caps_esc   &kp F9            &plusminus       &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
+&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &kp F13  &none        &none
+                                               &email    &trans        &non_breaking       &kp TAB
             >;
         };
 
