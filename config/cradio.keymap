@@ -336,7 +336,7 @@
             #binding-cells = <0>;
             bindings = <&kp F13 &kp W &kp T>;
             label = "WIN_NEW_TXT";
-            wait-ms = <180>;
+            wait-ms = <200>;
         };
     };
 
