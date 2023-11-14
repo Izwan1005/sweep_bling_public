@@ -21,6 +21,7 @@
 
             label = "NORSK_AO";
         };
+
         norsk_AO_cap: norsk_AO_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -34,12 +35,14 @@
 
             label = "NORSK_AO_CAP";
         };
+
         delete_line: delete_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp END &kp LS(HOME) &kp BACKSPACE>;
             label = "DELETE_LINE";
         };
+
         norsk_AE: norsk_AE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -53,6 +56,7 @@
 
             label = "NORSK_AE";
         };
+
         norsk_AE_CAP: norsk_AE_CAP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -66,6 +70,7 @@
 
             label = "NORSK_AE_CAP";
         };
+
         norsk_OE: norsk_OE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -79,6 +84,7 @@
 
             label = "NORSK_OE";
         };
+
         norsk_OE_CAP: norsk_OE_CAP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -92,6 +98,7 @@
 
             label = "NORSK_OE_CAP";
         };
+
         degree: degree {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -105,30 +112,35 @@
 
             label = "DEGREE";
         };
+
         par_mid: par_mid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
             label = "PAR_MID";
         };
+
         brk_mid: brk_mid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
             label = "BRK_MID";
         };
+
         brc_mid: brc_mid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "BRC_MID";
         };
+
         email: email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp I &kp Z &kp W &kp A &kp N &kp DOT &kp P &kp E &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "EMAIL";
         };
+
         IKM_ADMIN: IKM_ADMIN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -138,6 +150,7 @@
 
             label = "IKM_ADMIN";
         };
+
         IKM_PC: IKM_PC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -147,6 +160,7 @@
 
             label = "IKM_PC";
         };
+
         INS_FIG: INS_FIG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -171,6 +185,7 @@
 
             label = "INS_FIG";
         };
+
         INS_TAB: INS_TAB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -195,6 +210,7 @@
 
             label = "INS_TAB";
         };
+
         INS_REF: INS_REF {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -221,6 +237,7 @@
 
             label = "INS_REF";
         };
+
         INS_CAP: INS_CAP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -228,12 +245,14 @@
             label = "INS_CAP";
             wait-ms = <150>;
         };
+
         NOR_ID: NOR_ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp N0 &kp N1 &kp N0 &kp N9 &kp N9 &kp N3 &kp N2 &kp N3 &kp N7 &kp N2 &kp N4>;
             label = "NOR_ID";
         };
+
         INS_COL: INS_COL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -244,6 +263,7 @@
 
             label = "INS_COL";
         };
+
         INS_ROW: INS_ROW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -254,6 +274,7 @@
 
             label = "INS_ROW";
         };
+
         plusminus: plusminus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -267,6 +288,7 @@
 
             label = "PLUSMINUS";
         };
+
         APDL_nodeNumber: APDL_nodeNumber {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -283,6 +305,7 @@
             label = "APDL_NODENUMBER";
             wait-ms = <200>;
         };
+
         INS_LINK: INS_LINK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -299,12 +322,21 @@
 
             label = "INS_LINK";
         };
+
         ACROBAT_accept: ACROBAT_accept {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F13 &kp DOWN &kp DOWN &kp DOWN &kp RIGHT_ARROW &kp DOWN &kp ENTER>;
             label = "ACROBAT_ACCEPT";
             wait-ms = <200>;
+        };
+
+        WIN_new_txt: WIN_new_txt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F13 &kp W &kp T>;
+            label = "WIN_NEW_TXT";
+            wait-ms = <180>;
         };
     };
 
@@ -317,6 +349,7 @@
 
             tapping-term-ms = <300>;
         };
+
         ht_tap: HT_TAP {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_TAP";
@@ -328,6 +361,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
         };
+
         AO: AO {
             compatible = "zmk,behavior-tap-dance";
             label = "AO";
@@ -336,6 +370,7 @@
 
             tapping-term-ms = <300>;
         };
+
         QUOT_DQUO: QUOT_DQUO {
             compatible = "zmk,behavior-tap-dance";
             label = "QUOT_DQUO";
@@ -344,6 +379,7 @@
 
             tapping-term-ms = <300>;
         };
+
         AE: AE {
             compatible = "zmk,behavior-tap-dance";
             label = "AE";
@@ -352,6 +388,7 @@
 
             tapping-term-ms = <300>;
         };
+
         OE: OE {
             compatible = "zmk,behavior-tap-dance";
             label = "OE";
@@ -360,6 +397,7 @@
 
             tapping-term-ms = <300>;
         };
+
         SHFT_SPC: SHFT_SPC {
             compatible = "zmk,behavior-hold-tap";
             label = "SHFT_SPC";
@@ -369,6 +407,7 @@
             tapping-term-ms = <100>;
             hold-trigger-key-positions = <32>;
         };
+
         UND_MINS: UND_MINS {
             compatible = "zmk,behavior-tap-dance";
             label = "UND_MINS";
@@ -377,6 +416,7 @@
 
             tapping-term-ms = <300>;
         };
+
         AMP_CURL: AMP_CURL {
             compatible = "zmk,behavior-tap-dance";
             label = "AMP_CURL";
@@ -385,6 +425,7 @@
 
             tapping-term-ms = <300>;
         };
+
         SUB_SUP: SUB_SUP {
             compatible = "zmk,behavior-tap-dance";
             label = "SUB_SUP";
@@ -392,6 +433,7 @@
             tapping-term-ms = <300>;
             bindings = <&kp LC(EQUAL)>, <&kp LC(LS(EQUAL))>;
         };
+
         EXC_G: EXC_G {
             compatible = "zmk,behavior-tap-dance";
             label = "EXC_G";
@@ -400,6 +442,7 @@
 
             tapping-term-ms = <165>;
         };
+
         QUE_J: QUE_J {
             compatible = "zmk,behavior-tap-dance";
             label = "QUE_J";
@@ -408,6 +451,7 @@
 
             tapping-term-ms = <165>;
         };
+
         ht_hold: ht_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_HOLD";
@@ -419,6 +463,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
         };
+
         B_USB: B_USB {
             compatible = "zmk,behavior-tap-dance";
             label = "B_USB";
@@ -427,6 +472,7 @@
 
             tapping-term-ms = <165>;
         };
+
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
@@ -438,6 +484,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
         };
+
         V_BLE: V_BLE {
             compatible = "zmk,behavior-tap-dance";
             label = "V_BLE";
@@ -446,6 +493,7 @@
 
             tapping-term-ms = <165>;
         };
+
         non_breaking: non_breaking {
             compatible = "zmk,behavior-tap-dance";
             label = "NON_BREAKING";
@@ -454,6 +502,7 @@
 
             tapping-term-ms = <300>;
         };
+
         CTRL_at: CTRL_at {
             compatible = "zmk,behavior-hold-tap";
             label = "CTRL_AT";
@@ -462,6 +511,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
         SHFT_ID: SHFT_ID {
             compatible = "zmk,behavior-hold-tap";
             label = "SHFT_ID";
@@ -597,10 +647,10 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &plusminus       &INS_TAB  &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
-&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG  &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF  &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &kp F13  &none        &none
-                                               &email    &trans        &non_breaking       &kp TAB
+&caps_esc   &kp F9            &plusminus       &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
+&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &kp F13  &none        &none
+                                               &WIN_new_txt  &trans        &non_breaking       &kp TAB
             >;
         };
 
