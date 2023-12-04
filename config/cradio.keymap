@@ -338,6 +338,23 @@
             label = "WIN_NEW_TXT";
             wait-ms = <200>;
         };
+
+        INS_HIGHLIGHT: INS_HIGHLIGHT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 150>,
+                <&kp H>,
+                <&macro_wait_time 150>,
+                <&kp I>,
+                <&macro_wait_time 150>,
+                <&kp ENTER>;
+
+            label = "INS_HIGHLIGHT";
+        };
     };
 
     behaviors {
@@ -647,9 +664,9 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &plusminus       &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9      &degree  &kp K_CMENU  &kp DELETE
-&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp LS(F3)  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP    &kp F13  &none        &none
+&caps_esc   &kp F9            &plusminus       &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9          &degree  &kp K_CMENU  &kp DELETE
+&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE      &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13  &none        &none
                                                &WIN_new_txt  &trans        &non_breaking       &kp TAB
             >;
         };
