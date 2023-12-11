@@ -664,10 +664,10 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &plusminus       &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9          &degree  &kp K_CMENU  &kp DELETE
-&AO         &INS_LINK         &ACROBAT_accept  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber  &INS_CAP         &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13  &none        &none
-                                               &WIN_new_txt  &trans        &non_breaking       &kp TAB
+&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9          &degree  &kp K_CMENU  &kp DELETE
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE      &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13  &none        &none
+                                              &WIN_new_txt  &trans        &non_breaking       &kp TAB
             >;
         };
 
@@ -691,10 +691,10 @@
 
         Symbol {
             bindings = <
-&none      &none          &none   &kp HASH               &kp MINUS         &brk_mid                 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
-&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE       &kp UNDERSCORE    &par_mid                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &kp AT
+&none      &none          &none   &kp HASH               &kp MINUS         &plusminus               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
+&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE       &kp UNDERSCORE    &kp MINUS                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &kp AT
 &kp ASTRK  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES      &kp TILDE         &brc_mid                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
-                                  &mt LCTRL EXCLAMATION  &kp SPACE         &mt LEFT_SHIFT QUESTION  &trans
+                                  &mt LCTRL EXCLAMATION  &kp SPACE         &mt LEFT_SHIFT KP_EQUAL  &degree
             >;
         };
 
