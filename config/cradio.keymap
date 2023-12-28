@@ -664,10 +664,10 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &kp LC(A)           &kp F9          &degree  &kp K_CMENU  &kp DELETE
-&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE      &none        &OE
-&kp LS(F3)  &APDL_nodeNumber  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13  &none        &none
-                                              &WIN_new_txt  &trans        &non_breaking       &kp TAB
+&caps_esc   &kp F9            &INS_CAP        &INS_TAB   &NOR_ID       &kp LC(A)           &kp F9          &WIN_new_txt  &kp K_CMENU  &kp DELETE
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG   &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE           &none        &OE
+&kp LS(F3)  &APDL_nodeNumber  &INS_LINK       &INS_REF   &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13       &none        &none
+                                              &kp LC(H)  &trans        &non_breaking       &kp TAB
             >;
         };
 
