@@ -548,12 +548,6 @@
             layers = <0>;
         };
 
-        RIGHT_ENT {
-            bindings = <&kp ENTER>;
-            key-positions = <27 28>;
-            layers = <0 2>;
-        };
-
         delete_line_combo {
             bindings = <&delete_line>;
             key-positions = <30 31>;
@@ -596,14 +590,14 @@
             layers = <0>;
         };
 
-        Arrow_left {
-            bindings = <&kp LEFT>;
+        NE_HYPHEN {
+            bindings = <&kp MINUS>;
             key-positions = <16 17>;
             layers = <0>;
         };
 
-        Arrow_right {
-            bindings = <&kp RIGHT>;
+        EI_UNDERSCORE {
+            bindings = <&kp UNDERSCORE>;
             key-positions = <17 18>;
             layers = <0>;
         };
@@ -614,8 +608,8 @@
             layers = <0>;
         };
 
-        Arrow_up {
-            bindings = <&kp UP_ARROW>;
+        LU_SQUO {
+            bindings = <&kp SQT>;
             key-positions = <6 7>;
             layers = <0>;
         };
@@ -648,6 +642,36 @@
             key-positions = <11 10>;
             layers = <0>;
         };
+
+        Y_HASH {
+            bindings = <&kp HASH>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
+
+        IO_PERC {
+            bindings = <&kp PERCENT>;
+            key-positions = <18 19>;
+            layers = <0>;
+        };
+
+        DESK_LEFT {
+            bindings = <&kp LC(LG(LEFT))>;
+            key-positions = <27 26>;
+            layers = <0>;
+        };
+
+        DESK_RIGHT {
+            bindings = <&kp LC(LG(RIGHT))>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        UY_DQUO {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -664,7 +688,7 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &INS_CAP        &INS_TAB   &NOR_ID       &kp LC(A)           &kp F9          &WIN_new_txt  &kp K_CMENU  &kp DELETE
+&caps_esc   &kp F9            &INS_CAP        &INS_TAB   &NOR_ID       &kp LC(A)           &none           &WIN_new_txt  &kp K_CMENU  &kp DELETE
 &AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG   &IKM_PC       &kp LC(LS(LEFT))    &INS_HIGHLIGHT  &AE           &none        &OE
 &kp LS(F3)  &APDL_nodeNumber  &INS_LINK       &INS_REF   &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP        &kp F13       &none        &none
                                               &kp LC(H)  &trans        &non_breaking       &kp TAB
