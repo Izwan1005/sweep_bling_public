@@ -652,6 +652,7 @@
         HIDE_element {
             bindings = <&kp LC(H)>;
             key-positions = <23 24>;
+            layers = <0>;
         };
 
         UY_doubleQuot {
@@ -663,6 +664,12 @@
         JL_plus {
             bindings = <&kp PLUS>;
             key-positions = <5 6>;
+            layers = <0>;
+        };
+
+        OF_ElevationView {
+            bindings = <&kp LC(E)>;
+            key-positions = <4 3>;
             layers = <0>;
         };
     };
