@@ -334,7 +334,7 @@
         WIN_new_txt: WIN_new_txt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13 &kp W &kp T>;
+            bindings = <&kp K_APP &kp W &kp T>;
             label = "WIN_NEW_TXT";
             wait-ms = <200>;
         };
@@ -355,6 +355,13 @@
 
             label = "INS_HIGHLIGHT";
         };
+
+        sel_line: sel_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME)>;
+            label = "SEL_LINE";
+        };
     };
 
     behaviors {
@@ -373,9 +380,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <170>;
+            tapping-term-ms = <220>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
         };
 
@@ -457,7 +464,7 @@
             #binding-cells = <0>;
             bindings = <&kp G>, <&kp EXCLAMATION>;
 
-            tapping-term-ms = <165>;
+            tapping-term-ms = <200>;
         };
 
         QUE_J: QUE_J {
@@ -537,6 +544,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        cap_I: cap_I {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAP_I";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp LS(I)>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -544,8 +560,14 @@
 
         NPP_comment {
             bindings = <&kp LC(Q)>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0>;
+        };
+
+        RIGHT_ENT {
+            bindings = <&kp ENTER>;
+            key-positions = <27 28>;
+            layers = <0 2>;
         };
 
         delete_line_combo {
@@ -556,120 +578,96 @@
 
         LEFT_TAB {
             bindings = <&kp TAB>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
             layers = <0>;
         };
 
         bootloader_left {
             bindings = <&bootloader>;
-            key-positions = <4 14 24>;
-            layers = <0>;
-        };
-
-        reset_left {
-            bindings = <&sys_reset>;
-            key-positions = <2 12 22>;
-            layers = <0>;
-        };
-
-        reset_right {
-            bindings = <&sys_reset>;
-            key-positions = <7 17 27>;
+            key-positions = <5 17 29>;
             layers = <0>;
         };
 
         QUES {
             bindings = <&kp QUESTION>;
-            key-positions = <15 16>;
+            key-positions = <18 19>;
             layers = <0>;
         };
 
         EXCLAM {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <13 14>;
+            key-positions = <17 16>;
             layers = <0>;
-        };
-
-        NE_HYPHEN {
-            bindings = <&kp MINUS>;
-            key-positions = <16 17>;
-            layers = <0>;
-        };
-
-        EI_UNDERSCORE {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <17 18>;
-            layers = <0>;
-        };
-
-        Arrow_down {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <27 26>;
-            layers = <0>;
-        };
-
-        LU_SQUO {
-            bindings = <&kp SQT>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        numpad {
-            bindings = <&tog 2>;
-            key-positions = <20 21 22>;
-            layers = <0 2>;
         };
 
         esc_right {
             bindings = <&kp ESCAPE>;
-            key-positions = <5 6>;
-            layers = <2>;
-        };
-
-        F2_num {
-            bindings = <&kp F2>;
-            key-positions = <3 4>;
+            key-positions = <6 7>;
             layers = <2>;
         };
 
         NPP_hideline {
             bindings = <&kp LA(H)>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
         };
 
-        SBT_comment {
-            bindings = <&kp LC(SLASH)>;
-            key-positions = <11 10>;
+        TOG_NUM {
+            bindings = <&tog 2>;
+            key-positions = <40 41 39>;
             layers = <0>;
         };
 
-        Y_HASH {
-            bindings = <&kp HASH>;
-            key-positions = <8 9>;
+        TOG_BASE {
+            bindings = <&tog 0>;
+            key-positions = <39 40 41>;
+            layers = <2 0>;
+        };
+
+        Numpad {
+            bindings = <&tog 2>;
+            key-positions = <25 26 27>;
+            layers = <2 0>;
+        };
+
+        NE_mins {
+            bindings = <&kp MINUS>;
+            key-positions = <19 20>;
             layers = <0>;
         };
 
-        HIDE_element {
+        EI_unds {
+            bindings = <&kp UNDER>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        LU_dquo {
+            bindings = <&kp LS(SINGLE_QUOTE)>;
+            key-positions = <8 7>;
+            layers = <0>;
+        };
+
+        VB_OF-hide {
             bindings = <&kp LC(H)>;
-            key-positions = <23 24>;
+            key-positions = <28 29>;
             layers = <0>;
         };
 
-        UY_doubleQuot {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        JL_plus {
-            bindings = <&kp PLUS>;
-            key-positions = <5 6>;
-            layers = <0>;
-        };
-
-        OF_ElevationView {
+        PG_OF-elevation {
             bindings = <&kp LC(E)>;
-            key-positions = <4 3>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        duplicateLine {
+            bindings = <&kp LC(LA(UP_ARROW))>;
+            key-positions = <5 1>;
+            layers = <0>;
+        };
+
+        UY_dquo {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <8 9>;
             layers = <0>;
         };
     };
