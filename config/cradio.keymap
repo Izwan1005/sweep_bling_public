@@ -653,10 +653,10 @@
 
         Base {
             bindings = <
-&kp Q                 &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y    &lt 6 SEMICOLON
-&lt 2 A               &lt 3 R             &lt 4 S  &lt 5 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I    &kp O
-&ht_tap LEFT_SHIFT Z  &ht_tap LEFT_ALT X  &kp C    &kp V                 &ht_tap LC(LEFT_ALT) B    &kp K                      &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                                                   &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 2 TAB
+&ht_tap LC(LEFT_ALT) Q  &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y    &lt 6 SEMICOLON
+&lt 2 A                 &lt 3 R             &lt 4 S  &lt 5 T               &ht_tap LEFT_GUI D        &kp H                      &kp N             &kp E      &kp I    &kp O
+&ht_tap LEFT_SHIFT Z    &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &kp DOT  &kp FSLH
+                                                     &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 2 TAB
             >;
         };
 
