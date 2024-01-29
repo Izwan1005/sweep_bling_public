@@ -653,19 +653,19 @@
 
         Base {
             bindings = <
-&ht_tap LC(LEFT_ALT) Q  &kp W               &kp F    &kp P                 &mt LEFT_GUI G            &kp J                      &kp L             &kp U      &kp Y    &lt 6 SEMICOLON
+&ht_tap LC(LEFT_ALT) Q  &kp W               &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U      &kp Y    &lt 6 SEMICOLON
 &lt 2 A                 &lt 3 R             &lt 4 S  &lt 5 T               &kp D                     &kp H                      &kp N             &kp E      &kp I    &kp O
 &ht_tap LEFT_SHIFT Z    &ht_tap LEFT_ALT X  &kp C    &kp V                 &kp B                     &kp K                      &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                                                     &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &layer_tap 2 TAB
+                                                     &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &mt LEFT_GUI TAB
             >;
         };
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &sel_line           &kp F12    &none  &kp K_CMENU  &kp DELETE
-&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS    &AE    &none        &OE
-&kp LS(F3)  &kp LC(NUMBER_1)  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP   &none  &none        &none
-                                              &WIN_new_txt  &trans        &non_breaking       &kp ENTER
+&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &sel_line           &kp F12   &none  &kp K_CMENU       &none
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS   &AE    &none             &OE
+&kp LS(F3)  &kp LC(NUMBER_1)  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP  &none  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
+                                              &WIN_new_txt  &trans        &non_breaking       &none
             >;
         };
 
