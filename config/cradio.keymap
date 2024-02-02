@@ -368,6 +368,7 @@
             #binding-cells = <0>;
             bindings = <&kp E &kp Z &kp L &kp A &kp N &kp D &kp DOT &kp S &kp H &kp A &kp P &kp R &kp N3 &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp TAB &kp LS(L) &kp O &kp G &kp O &kp U &kp T &kp N2 &kp N0 &kp N2 &kp N3 &kp N2 &kp N0>;
             label = "SHAPR3D";
+            wait-ms = <150>;
         };
     };
 
