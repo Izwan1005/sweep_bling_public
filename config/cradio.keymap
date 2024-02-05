@@ -663,7 +663,7 @@
             bindings = <
 &ht_tap LC(LEFT_ALT) Q  &kp W    &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U            &kp Y              &lt 6 SEMICOLON
 &lt 2 A                 &lt 3 R  &lt 4 S  &lt 5 T               &kp D                     &kp H                      &kp N             &kp E            &kp I              &kp O
-&ht_tap LEFT_SHIFT Z    &kp X    &kp C    &kp V                 &mt LA(LCTRL) B           &kp K                      &kp M             &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt LC(LEFT_SHIFT) SLASH
+&ht_tap LEFT_SHIFT Z    &kp X    &kp C    &kp V                 &kp B                     &kp K                      &kp M             &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt LC(LEFT_SHIFT) SLASH
                                           &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &mt LEFT_GUI TAB
             >;
         };
@@ -679,10 +679,10 @@
 
         Numbers {
             bindings = <
-&kp LS(LCTRL)   &kp HOME                 &kp UP_ARROW      &kp END                 &kp TAB                        &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2        &kp KP_NUMBER_3              &kp KP_MULTIPLY
-&trans          &kp LEFT_ARROW           &kp DOWN          &kp RIGHT               &kp C_VOLUME_UP                &kp KP_SUBTRACT                  &kp KP_N4        &mt RCTRL KP_NUMBER_5  &mt RIGHT_SHIFT KP_NUMBER_6  &kp KP_DIVIDE
-&kp KP_NUMLOCK  &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_VOLUME_DOWN              &kp KP_DOT                       &kp KP_N7        &kp KP_N8              &kp KP_N9                    &kp EQUAL
-                                                           &ht_tap LCTRL KP_ENTER  &ht_tap LS(LCTRL) BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
+&kp LS(LEFT_ALT)  &kp HOME                 &kp UP_ARROW      &kp END                 &kp TAB                        &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2        &kp KP_NUMBER_3              &kp KP_MULTIPLY
+&trans            &kp LEFT_ARROW           &kp DOWN          &kp RIGHT               &kp C_VOLUME_UP                &kp KP_SUBTRACT                  &kp KP_N4        &mt RCTRL KP_NUMBER_5  &mt RIGHT_SHIFT KP_NUMBER_6  &kp KP_DIVIDE
+&kp KP_NUMLOCK    &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_VOLUME_DOWN              &kp KP_DOT                       &kp KP_N7        &kp KP_N8              &kp KP_N9                    &kp EQUAL
+                                                             &ht_tap LCTRL KP_ENTER  &ht_tap LS(LCTRL) BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
             >;
         };
 
