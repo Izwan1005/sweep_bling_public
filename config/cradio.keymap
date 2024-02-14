@@ -366,15 +366,20 @@
         SHAPR3D: SHAPR3D {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp E &kp Z &kp L &kp A &kp N &kp D &kp DOT &kp S &kp H &kp A &kp P &kp R &kp N3 &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp TAB &kp LS(L) &kp O &kp G &kp O &kp U &kp T>;
+            bindings = <&kp E &kp Z &kp L &kp A &kp N &kp D &kp DOT &kp S &kp H &kp A &kp P &kp R &kp N3 &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp TAB &kp LS(L) &kp O &kp G &kp O &kp U &kp T &kp N2 &kp N0 &kp N2 &kp N3 &kp N2 &kp N0>;
             label = "SHAPR3D";
-            wait-ms = <150>;
+            wait-ms = <100>;
         };
 
         define_method: define_method {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp E &kp F &kp SPACE &kp UNDER &kp M &kp E &kp T &kp H &kp O &kp D &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR &kp COLON &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp D &kp O &kp C &kp S &kp T &kp R &kp I &kp N &kp G &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>;
+            bindings =
+                <&kp D &kp E &kp F &kp SPACE &kp UNDER &kp M &kp E &kp T &kp H &kp O &kp D &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR &kp COLON &kp RET>,
+                <&macro_press>,
+                <&kp DQT &kp DQT &kp DQT &kp RET &kp D &kp O &kp C &kp S &kp T &kp R &kp I &kp N &kp G &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>,
+                <&macro_press>;
+
             label = "DEFINE_METHOD";
         };
     };
