@@ -382,6 +382,14 @@
 
             label = "DEFINE_METHOD";
         };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(RIGHT) &kp LC(LS(LEFT))>;
+
+            label = "SELECT_WORD";
+        };
     };
 
     behaviors {
@@ -682,9 +690,9 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &sel_line           &kp F12   &none  &kp K_CMENU       &none
-&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS   &AE    &define_method    &OE
-&kp LS(F3)  &kp LC(NUMBER_1)  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP  &none  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
+&caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &sel_line           &kp F12   &select_word  &kp K_CMENU       &none
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS   &AE           &define_method    &OE
+&kp LS(F3)  &kp LC(NUMBER_1)  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP  &none         &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
                                               &WIN_new_txt  &trans        &non_breaking       &SHAPR3D
             >;
         };
