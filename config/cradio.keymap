@@ -370,6 +370,13 @@
             label = "SHAPR3D";
             wait-ms = <150>;
         };
+
+        define_method: define_method {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp E &kp F &kp SPACE &kp UNDER &kp M &kp E &kp T &kp H &kp O &kp D &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR &kp COLON &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp D &kp O &kp C &kp S &kp T &kp R &kp I &kp N &kp G &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>;
+            label = "DEFINE_METHOD";
+        };
     };
 
     behaviors {
@@ -671,7 +678,7 @@
         Macros {
             bindings = <
 &caps_esc   &kp F9            &INS_CAP        &INS_TAB      &NOR_ID       &sel_line           &kp F12   &none  &kp K_CMENU       &none
-&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS   &AE    &none             &OE
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT  &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &kp INS   &AE    &define_method    &OE
 &kp LS(F3)  &kp LC(NUMBER_1)  &INS_LINK       &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP  &none  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
                                               &WIN_new_txt  &trans        &non_breaking       &SHAPR3D
             >;
