@@ -648,7 +648,7 @@
 
         NPP_hideline {
             bindings = <&kp LA(H)>;
-            key-positions = <2 1>;
+            key-positions = <1 0>;
         };
 
         Numpad {
