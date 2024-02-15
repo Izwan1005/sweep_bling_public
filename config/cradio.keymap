@@ -367,10 +367,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp E &kp Z &kp L &kp A &kp N &kp D &kp DOT &kp S &kp H &kp A &kp P &kp R &kp N3 &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp TAB &kp LS(L) &kp O &kp G &kp O &kp U &kp T &kp N2>,
-                <&macro_wait_time 20>,
+                <&kp E &kp Z &kp L &kp A &kp N &kp D &kp DOT &kp S &kp H &kp A &kp P &kp R &kp N3 &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M &kp TAB &kp LS(L) &kp O &kp G &kp O &kp U &kp T>,
+                <&macro_wait_time 100>,
                 <&macro_tap>,
-                <&kp N0 &kp N2 &kp N3 &kp N2 &kp N0>;
+                <&kp N2 &kp N0 &kp N2 &kp N3 &kp N2 &kp N0>;
 
             label = "SHAPR3D";
             wait-ms = <100>;
@@ -388,7 +388,9 @@
                 <&macro_tap>,
                 <&kp DQT &kp DQT &kp DQT &kp RET>,
                 <&macro_tap>,
-                <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>;
+                <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>,
+                <&macro_press>,
+                <&macro_press>;
 
             label = "DEFINE_METHOD";
         };
