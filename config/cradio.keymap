@@ -376,9 +376,14 @@
             #binding-cells = <0>;
             bindings =
                 <&kp D &kp E &kp F &kp SPACE &kp UNDER &kp M &kp E &kp T &kp H &kp O &kp D &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR &kp COLON &kp RET>,
-                <&macro_press>,
-                <&kp DQT &kp DQT &kp DQT &kp RET &kp D &kp O &kp C &kp S &kp T &kp R &kp I &kp N &kp G &kp RET &kp DQT &kp DQT &kp DQT &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>,
-                <&macro_press>;
+                <&macro_tap>,
+                <&kp DQT &kp DQT &kp DQT &kp RET>,
+                <&macro_tap>,
+                <&kp D &kp O &kp C &kp S &kp T &kp R &kp I &kp N &kp G &kp RET>,
+                <&macro_tap>,
+                <&kp DQT &kp DQT &kp DQT &kp RET>,
+                <&macro_tap>,
+                <&kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp LPAR &kp S &kp E &kp L &kp F &kp RPAR>;
 
             label = "DEFINE_METHOD";
         };
@@ -699,10 +704,10 @@
 
         Numbers {
             bindings = <
-&kp LS(LEFT_ALT)  &kp HOME                 &kp UP_ARROW      &kp END                     &kp TAB                           &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2        &kp KP_NUMBER_3              &kp KP_MULTIPLY
-&trans            &kp LEFT_ARROW           &kp DOWN          &kp RIGHT                   &kp C_VOLUME_UP                   &kp KP_SUBTRACT                  &kp KP_N4        &mt RCTRL KP_NUMBER_5  &mt RIGHT_SHIFT KP_NUMBER_6  &kp KP_DIVIDE
-&kp KP_NUMLOCK    &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT                  &kp C_VOLUME_DOWN                 &kp KP_DOT                       &kp KP_N7        &kp KP_N8              &kp KP_N9                    &kp EQUAL
-                                                             &ht_tap LA(LCTRL) KP_ENTER  &ht_tap LS(LEFT_ALT) BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
+&kp LS(LEFT_ALT)  &kp HOME                 &kp UP_ARROW      &kp END                     &kp TAB                        &kp KP_PLUS                      &kp KP_NUMBER_1  &kp KP_NUMBER_2        &kp KP_NUMBER_3              &kp KP_MULTIPLY
+&trans            &kp LEFT_ARROW           &kp DOWN          &kp RIGHT                   &kp C_VOLUME_UP                &kp KP_SUBTRACT                  &kp KP_N4        &mt RCTRL KP_NUMBER_5  &mt RIGHT_SHIFT KP_NUMBER_6  &kp KP_DIVIDE
+&kp KP_NUMLOCK    &ht_tap LEFT_ALT C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT                  &kp C_VOLUME_DOWN              &kp KP_DOT                       &kp KP_N7        &kp KP_N8              &kp KP_N9                    &kp EQUAL
+                                                             &ht_tap LA(LCTRL) KP_ENTER  &ht_tap LS(LCTRL) BACKSPACE    &ht_tap RIGHT_SHIFT KP_NUMBER_0  &kp TAB
             >;
         };
 
@@ -739,6 +744,15 @@
 &out OUT_BLE  &none   &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 1  &bt BT_SEL 2
 &out OUT_USB  &none   &trans  &trans  &trans    &none         &none         &none         &none         &none
                               &trans  &trans    &trans        &none
+            >;
+        };
+
+        Arrow {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW    &trans     &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans          &trans     &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
