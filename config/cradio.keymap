@@ -410,7 +410,7 @@
                 <&kp K_APP>,
                 <&macro_wait_time 150>,
                 <&macro_tap>,
-                <&kp M &kp M &kp ENTER>;
+                <&kp M &kp ENTER>;
 
             label = "MERGE_CELL_WORDS";
         };
