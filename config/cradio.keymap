@@ -432,9 +432,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <180>;
+            tapping-term-ms = <120>;
+            flavor = "hold-preferred";
         };
 
         AO: AO {
@@ -704,10 +703,10 @@
 
         Base {
             bindings = <
-&kp Q                 &kp W    &kp F    &kp P                 &kp G                      &kp J                      &kp L             &kp U            &kp Y              &lt 6 SEMICOLON
-&lt 2 A               &lt 3 R  &lt 4 S  &lt 5 T               &kp D                      &kp H                      &kp N             &kp E            &kp I              &kp O
-&ht_tap LEFT_SHIFT Z  &kp X    &kp C    &kp V                 &ht_tap LC(RIGHT_ALT) B    &kp K                      &kp M             &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt LC(LEFT_SHIFT) SLASH
-                                        &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE     &ht_hold LEFT_SHIFT SPACE  &mt LEFT_GUI TAB
+&kp Q                 &kp W    &kp F    &kp P                 &kp G                     &kp J                      &kp L             &kp U            &kp Y              &lt 6 SEMICOLON
+&lt 2 A               &lt 3 R  &lt 4 S  &lt 5 T               &kp D                     &kp H                      &kp N             &kp E            &kp I              &kp O
+&ht_tap LEFT_SHIFT Z  &kp X    &kp C    &kp V                 &kp B                     &kp K                      &kp M             &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt LC(LEFT_SHIFT) SLASH
+                                        &ht_hold LCTRL ENTER  &layer_tap 1 BACKSPACE    &ht_hold LEFT_SHIFT SPACE  &mt LEFT_GUI TAB
             >;
         };
 
