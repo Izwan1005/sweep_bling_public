@@ -730,10 +730,10 @@
 
         additional {
             bindings = <
-&trans  &trans  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp DELETE  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &trans  &trans
+&trans  &trans  &kp RC(RIGHT_ALT)  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp DELETE         &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                                   &trans  &trans    &trans  &trans
             >;
         };
 
