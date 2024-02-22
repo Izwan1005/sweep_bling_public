@@ -692,7 +692,13 @@
         };
 
         UY_dquo {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp PLUS>;
+            key-positions = <7 6>;
+            layers = <0>;
+        };
+
+        UY_equal {
+            bindings = <&kp EQUAL>;
             key-positions = <7 8>;
             layers = <0>;
         };
