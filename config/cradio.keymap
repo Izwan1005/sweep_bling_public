@@ -686,7 +686,7 @@
         };
 
         UY_dquo {
-            bindings = <&kp PLUS>;
+            bindings = <&kp KP_PLUS>;
             key-positions = <7 6>;
             layers = <0>;
         };
