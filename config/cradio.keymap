@@ -414,6 +414,20 @@
 
             label = "MERGE_CELL_WORDS";
         };
+
+        sigma_stress: sigma_stress {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "SIGMA_STRESS";
+        };
     };
 
     behaviors {
@@ -740,7 +754,7 @@
         Symbol {
             bindings = <
 &none      &none          &none   &kp HASH           &kp MINUS         &plusminus               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
-&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &degree                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &none
+&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &degree                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &sigma_stress
 &kp ASTRK  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES  &kp TILDE         &kp EQUAL                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
                                   &mt LCTRL AT       &kp SPACE         &mt LEFT_SHIFT KP_EQUAL  &none
             >;
