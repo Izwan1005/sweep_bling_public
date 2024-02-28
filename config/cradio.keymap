@@ -451,7 +451,7 @@
         PPT_bring_front: PPT_bring_front {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_APP &kp R &kp R &kp RIGHT>;
+            bindings = <&kp K_APP &kp R &kp RIGHT &kp R>;
             label = "PPT_BRING_FRONT";
             wait-ms = <200>;
         };
