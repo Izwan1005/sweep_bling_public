@@ -727,7 +727,7 @@
         Macros {
             bindings = <
 &caps_esc   &kp F9            &INS_CAP           &INS_TAB      &NOR_ID       &sel_line           &kp F12       &kp INS           &kp K_CMENU       &mkp LCLK
-&AO         &ACROBAT_accept   &INS_HIGHLIGHT     &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &select_word  &AE               &define_method    &OE
+&AO         &ACROBAT_accept   &INS_HIGHLIGHT     &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &select_word  &AE               &none             &OE
 &kp LS(F3)  &kp LC(NUMBER_1)  &merge_cell_words  &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP      &APDL_nodeNumber  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
                                                  &WIN_new_txt  &trans        &non_breaking       &SHAPR3D
             >;
