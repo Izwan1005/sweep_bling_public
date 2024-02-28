@@ -447,6 +447,14 @@
 
             label = "INS_FONTCOLOR";
         };
+
+        PPT_bring_front: PPT_bring_front {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_APP &kp R &kp R>;
+            label = "PPT_BRING_FRONT";
+            wait-ms = <200>;
+        };
     };
 
     behaviors {
@@ -763,10 +771,10 @@
 
         additional {
             bindings = <
-&trans  &trans  &kp RC(RIGHT_ALT)  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp DELETE         &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                                   &trans  &trans    &trans  &trans
+&trans  &trans  &kp RC(RIGHT_ALT)  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp DELETE         &trans  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans  &trans              &trans  &trans  &trans  &trans  &trans
+                                   &trans  &trans              &trans  &trans
             >;
         };
 
