@@ -776,10 +776,10 @@
 
         additional {
             bindings = <
-&trans  &trans  &kp RC(RIGHT_ALT)  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp DELETE         &trans  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans  &trans              &trans  &trans  &trans  &trans  &trans
-                                   &trans  &trans              &trans  &trans
+&trans         &trans  &kp RC(RIGHT_ALT)  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&kp LA(LC(K))  &trans  &kp DELETE         &trans  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
+&trans         &trans  &trans             &trans  &trans              &trans  &trans  &trans  &trans  &trans
+                                          &trans  &trans              &trans  &trans
             >;
         };
 
