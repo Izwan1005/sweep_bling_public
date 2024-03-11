@@ -455,6 +455,21 @@
             label = "PPT_BRING_FRONT";
             wait-ms = <200>;
         };
+
+        INS_comment: INS_comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 150>,
+                <&kp N>,
+                <&macro_wait_time 150>,
+                <&kp L>;
+
+            label = "INS_COMMENT";
+        };
     };
 
     behaviors {
@@ -776,10 +791,10 @@
 
         additional {
             bindings = <
-&trans         &trans  &kp RC(RIGHT_ALT)  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&kp LA(LC(K))  &trans  &kp DELETE         &trans  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
-&trans         &trans  &trans             &trans  &trans              &trans  &trans  &trans  &trans  &trans
-                                          &trans  &trans              &trans  &trans
+&trans        &trans  &kp RC(RIGHT_ALT)  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&INS_comment  &trans  &kp DELETE         &trans  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans             &trans  &trans              &trans  &trans  &trans  &trans  &trans
+                                         &trans  &trans              &trans  &trans
             >;
         };
 
