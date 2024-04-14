@@ -763,6 +763,13 @@
         R_thumb_GUI {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <33 25>;
+            layers = <0>;
+        };
+
+        F5_thumb {
+            bindings = <&kp F5>;
+            key-positions = <24 30>;
+            layers = <0>;
         };
     };
 
@@ -798,10 +805,10 @@
 
         additional {
             bindings = <
-&trans        &trans  &kp RC(RIGHT_ALT)  &kp F12  &password_izwan_entry    &trans  &trans  &trans  &trans  &trans
-&INS_comment  &trans  &kp DELETE         &kp F5   &PPT_bring_front         &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans             &kp F9   &trans                   &trans  &trans  &trans  &trans  &trans
-                                         &trans   &trans                   &trans  &trans
+&trans        &trans  &trans      &kp F9   &password_izwan_entry    &trans  &trans  &trans  &trans  &trans
+&INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front         &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans      &kp F12  &trans                   &trans  &trans  &trans  &trans  &trans
+                                  &trans   &trans                   &trans  &trans
             >;
         };
 
