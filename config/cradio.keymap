@@ -773,6 +773,12 @@
             key-positions = <24 30>;
             layers = <0>;
         };
+
+        RESET {
+            bindings = <&bootloader>;
+            key-positions = <4 14 24 31>;
+            layers = <0>;
+        };
     };
 
     keymap {
