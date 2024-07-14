@@ -762,14 +762,14 @@
             layers = <0>;
         };
 
-        R_thumb_GUI {
-            bindings = <&kp RIGHT_GUI>;
+        R_thumb_date {
+            bindings = <&kp F5>;
             key-positions = <33 25>;
             layers = <0>;
         };
 
-        F5_thumb {
-            bindings = <&kp F5>;
+        L_thumb_GUI {
+            bindings = <&kp LEFT_GUI>;
             key-positions = <24 30>;
             layers = <0>;
         };
