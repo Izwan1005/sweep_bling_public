@@ -473,7 +473,7 @@
             label = "INS_COMMENT";
         };
 
-        password_izwan_entry: password_izwan_entry {
+        izwan_entry: password_izwan_entry {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(N) &kp O &kp E &kp N &kp T &kp R &kp Y &kp N1 &kp N8 &kp N8 &kp N8 &kp N1 &kp N7 &kp N0 &kp N0 &kp EXCL>;
@@ -813,10 +813,10 @@
 
         additional {
             bindings = <
-&trans        &trans  &trans      &kp F9   &password_izwan_entry    &trans  &trans  &trans  &trans  &trans
-&INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front         &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans      &kp F12  &trans                   &trans  &trans  &trans  &trans  &trans
-                                  &trans   &trans                   &trans  &trans
+&trans        &trans  &trans      &kp F9   &izwan_entry        &trans  &trans  &trans  &trans  &trans
+&INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans      &kp F12  &trans              &trans  &trans  &trans  &trans  &trans
+                                  &trans   &trans              &trans  &trans
             >;
         };
 
