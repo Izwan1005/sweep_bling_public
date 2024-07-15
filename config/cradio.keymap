@@ -472,13 +472,6 @@
 
             label = "INS_COMMENT";
         };
-
-        izwan_entry: password_izwan_entry {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp O &kp E &kp N &kp T &kp R &kp Y &kp N1 &kp N8 &kp N8 &kp N8 &kp N1 &kp N7 &kp N0 &kp N0 &kp EXCL>;
-            label = "PASSWORD_IZWAN_ENTRY";
-        };
     };
 
     behaviors {
@@ -782,9 +775,8 @@
 
         SOFT_OFF {
             bindings = <&soft_off>;
-            key-positions = <10 11 12 13 16 17 18 19 31 32>;
+            key-positions = <20 11 2>;
             layers = <0>;
-            timeout-ms = <200>;
         };
     };
 
@@ -820,7 +812,7 @@
 
         additional {
             bindings = <
-&trans        &trans  &trans      &kp F9   &izwan_entry        &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans      &kp F9   &trans              &trans  &trans  &trans  &trans  &trans
 &INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans      &kp F12  &trans              &trans  &trans  &trans  &trans  &trans
                                   &trans   &trans              &trans  &trans
