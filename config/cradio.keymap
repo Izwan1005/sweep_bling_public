@@ -812,7 +812,7 @@
 
         additional {
             bindings = <
-&trans        &trans  &trans      &kp F9   &trans              &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans      &kp F9   &kp K_WWW           &trans  &trans  &trans  &trans  &trans
 &INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans      &kp F12  &trans              &trans  &trans  &trans  &trans  &trans
                                   &trans   &trans              &trans  &trans
