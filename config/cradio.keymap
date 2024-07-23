@@ -333,6 +333,13 @@
             wait-ms = <200>;
         };
 
+        ACROBAT_complete: ACROBAT_complete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F13 &kp DOWN &kp DOWN &kp DOWN &kp RIGHT_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN &kp ENTER>;
+            wait-ms = <200>;
+        };
+
         WIN_new_txt: WIN_new_txt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
