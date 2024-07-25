@@ -809,7 +809,7 @@
 
         Macros {
             bindings = <
-&caps_esc   &kp F9             &INS_CAP           &INS_TAB      &NOR_ID       &sel_line           &kp F12       &kp INS           &kp K_CMENU       &kp F14
+&caps_esc   &kp F9             &INS_CAP           &INS_TAB      &NOR_ID       &sel_line           &none         &kp INS           &kp K_CMENU       &kp F14
 &AO         &ACROBAT_accept    &INS_HIGHLIGHT     &INS_FIG      &IKM_PC       &kp LC(LS(LEFT))    &select_word  &AE               &INS_FONTCOLOR    &OE
 &kp LS(F3)  &ACROBAT_complete  &merge_cell_words  &INS_REF      &IKM_ADMIN    &kp LS(LEFT_ARROW)  &SUB_SUP      &APDL_nodeNumber  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
                                                   &WIN_new_txt  &trans        &non_breaking       &SHAPR3D
@@ -836,16 +836,16 @@
 
         Symbol {
             bindings = <
-&none      &none          &none   &kp HASH           &kp MINUS         &plusminus               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
-&kp EQUAL  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &degree                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &sigma_stress
-&kp ASTRK  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES  &kp TILDE         &kp EQUAL                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
-                                  &mt LCTRL AT       &kp SPACE         &mt LEFT_SHIFT KP_EQUAL  &none
+&none  &none          &none   &kp HASH           &kp MINUS         &plusminus               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
+&none  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &degree                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &sigma_stress
+&none  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES  &kp TILDE         &kp EQUAL                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
+                              &mt LCTRL AT       &kp SPACE         &mt LEFT_SHIFT KP_EQUAL  &none
             >;
         };
 
         Functions {
             bindings = <
-&kp LA(LC(DELETE))  &kp F9       &kp F2      &trans                &kp LC(LS(N8))    &trans     &kp F1  &kp F2  &kp F3  &kp F10
+&kp LA(LC(DELETE))  &none        &kp F2      &trans                &kp LC(LS(N8))    &trans     &kp F1  &kp F2  &kp F3  &kp F10
 &kp LA(TAB)         &kp LG(TAB)  &kp TAB     &trans                &kp F12           &trans     &kp F4  &kp F5  &kp F6  &kp F11
 &kp LC(LS(N))       &kp LALT     &kp LC(N5)  &trans                &trans            &trans     &kp F7  &kp F8  &kp F9  &kp F12
                                              &ht_tap LCTRL DELETE  &kp LC(BSPC)      &kp LSHFT  &trans
