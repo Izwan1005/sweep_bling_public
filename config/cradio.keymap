@@ -779,6 +779,12 @@
             key-positions = <0 9>;
             layers = <0>;
         };
+
+        Right_E {
+            bindings = <&kp E>;
+            key-positions = <3 2>;
+            layers = <0>;
+        };
     };
 
     keymap {
