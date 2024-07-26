@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt { tapping-term-ms = <170>; };
@@ -464,21 +465,6 @@
             label = "PPT_BRING_FRONT";
             wait-ms = <200>;
         };
-
-        INS_comment: INS_comment {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <150>;
-            tap-ms = <150>;
-            bindings =
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 150>,
-                <&kp N>,
-                <&macro_wait_time 150>,
-                <&kp L>;
-
-            label = "INS_COMMENT";
-        };
     };
 
     behaviors {
@@ -830,7 +816,7 @@
 &trans        &trans  &trans      &kp F9   &kp C_AL_WWW        &trans  &trans  &trans  &trans  &trans
 &INS_comment  &trans  &kp DELETE  &kp F10  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans      &kp F12  &trans              &trans  &trans  &trans  &trans  &trans
-                                  &trans   &trans              &trans  &trans
+                                  &trans   &mkp RCLK           &trans  &trans
             >;
         };
 
