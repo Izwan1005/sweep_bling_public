@@ -785,6 +785,13 @@
             key-positions = <3 2>;
             layers = <0>;
         };
+
+        sublime_comment {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <11 12>;
+            layers = <0>;
+            timeout-ms = <100>;
+        };
     };
 
     keymap {
