@@ -465,6 +465,23 @@
             label = "PPT_BRING_FRONT";
             wait-ms = <200>;
         };
+
+        EXCEL_resize_column: EXCEL_resize_column {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 150>,
+                <&kp H>,
+                <&macro_wait_time 150>,
+                <&kp O>,
+                <&macro_wait_time 150>,
+                <&kp I>;
+
+            label = "EXCEL_RESIZE_COLUMN";
+        };
     };
 
     behaviors {
@@ -826,10 +843,10 @@
 
         additional {
             bindings = <
-&trans  &trans  &trans      &kp F9   &kp C_AL_WWW        &trans  &trans  &trans  &trans  &trans
-&none   &trans  &kp DELETE  &kp F10  &PPT_bring_front    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &kp F12  &trans              &trans  &trans  &trans  &trans  &trans
-                            &trans   &mkp RCLK           &trans  &trans
+&trans  &trans  &trans      &kp F9   &kp C_AL_WWW            &trans  &trans  &trans  &trans  &trans
+&none   &trans  &kp DELETE  &kp F10  &PPT_bring_front        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &kp F12  &EXCEL_resize_column    &trans  &trans  &trans  &trans  &trans
+                            &trans   &mkp RCLK               &trans  &trans
             >;
         };
 
