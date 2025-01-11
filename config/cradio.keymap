@@ -880,9 +880,9 @@
 
         Arrow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW    &trans     &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans          &trans     &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW    &trans             &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT          &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans          &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)
                         &trans  &trans    &trans  &trans
             >;
         };
