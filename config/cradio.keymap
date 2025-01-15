@@ -159,10 +159,10 @@
 
         Macros {
             bindings = <
-&caps_esc  &kp F9   &kp ESC  &kp ESC  &kp ESC    &kp ESC  &kp ESC  &kp ESC  &kp ESC           &kp ESC
-&AO        &kp ESC  &kp ESC  &kp ESC  &kp ESC    &kp ESC  &kp ESC  &AE      &kp ESC           &OE
-&kp ESC    &kp ESC  &kp ESC  &kp ESC  &kp ESC    &kp ESC  &kp ESC  &kp ESC  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
-                             &kp ESC  &trans     &none    &kp ESC
+&caps_esc  &kp F9   &none  &none  &none    &none  &none  &none  &none           &none
+&AO        &none  &none  &none  &none    &none  &none  &AE      &none           &OE
+&none    &none  &none  &none  &none    &none  &none  &none  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))
+                             &none  &trans     &none    &none
             >;
         };
 
@@ -177,27 +177,27 @@
 
         additional {
             bindings = <
-&trans  &trans  &trans      &kp F9   &kp C_AL_WWW            &trans  &trans  &trans  &trans  &trans
-&none   &trans  &kp DELETE  &kp F10  &PPT_bring_front        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &kp F12  &EXCEL_resize_column    &trans  &trans  &trans  &trans  &trans
-                            &trans   &mkp RCLK               &trans  &trans
+&trans  &trans  &trans      &trans   &trans            &trans  &trans  &trans  &trans  &trans
+&none   &trans  &kp DELETE  &trans &trans        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                            &trans   &trans               &trans  &trans
             >;
         };
 
         Symbol {
             bindings = <
-&none  &none          &none   &kp HASH           &kp MINUS         &plusminus               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
-&none  &kp LS(LG(S))  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &degree                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &sigma_stress
-&none  &kp LEFT_ALT   &none   &kp DOUBLE_QUOTES  &kp TILDE         &kp EQUAL                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
+&none  &none          &none   &kp HASH           &kp MINUS         &trans               &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND  &kp CARET
+&none  &none  &trans  &kp SINGLE_QUOTE   &kp UNDERSCORE    &trans                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &trans
+&none  &none   &none   &kp DOUBLE_QUOTES  &kp TILDE         &kp EQUAL                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT    &kp BACKSLASH
                               &mt LCTRL AT       &kp SPACE         &mt LEFT_SHIFT KP_EQUAL  &none
             >;
         };
 
         Functions {
             bindings = <
-&kp LA(LC(DELETE))  &none        &kp F2      &trans  &kp LC(LS(N8))    &trans     &kp F1  &kp F2  &kp F3  &kp F10
-&kp LA(TAB)         &kp LG(TAB)  &kp TAB     &trans  &kp F12           &trans     &kp F4  &kp F5  &kp F6  &kp F11
-&kp LC(LS(N))       &kp LALT     &kp LC(N5)  &trans  &trans            &trans     &kp F7  &kp F8  &kp F9  &kp F12
+&trans  &none        &trans      &trans  &trans    &trans     &kp F1  &kp F2  &kp F3  &kp F10
+&trans         &trans  &trans     &trans  &trans           &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&trans       &trans     &trans  &trans  &trans            &trans     &kp F7  &kp F8  &kp F9  &kp F12
                                              &none   &kp LC(BSPC)      &kp LSHFT  &trans
             >;
         };
