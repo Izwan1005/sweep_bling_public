@@ -204,7 +204,7 @@
 
         Bluetooth {
             bindings = <
-&bt BT_CLR    &trans  &trans  &soft_off  &trans    &none         &trans        &trans        &bt BT_NXT    &none
+&bt BT_CLR    &none  &trans  &soft_off  &trans    &none         &trans        &trans        &bt BT_NXT    &none
 &out OUT_BLE  &none   &trans  &trans     &trans    &bt BT_SEL 0  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 1  &bt BT_SEL 2
 &out OUT_USB  &none   &trans  &trans     &trans    &none         &none         &none         &none         &none
                               &trans     &trans    &trans        &none
